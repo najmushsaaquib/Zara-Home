@@ -9,6 +9,66 @@
     <link rel="stylesheet" href="test.css" />
     <title>Testing Environment</title>
   </head>
-  <body></body>
+  <body>
+
+
+
+    <!-- Login/signup section -->
+    <div id="tsd3">
+      <div class="login">
+          <img src="https://www.licious.in/img/default/profile_icon.svg" alt="User">
+      </div>
+      <div id="login">
+      <p><button id="logintext" style="text-decoration: none;">Login</button></p>
+      </div>
+      <div id="logout">
+          <p><button onclick="logoutFun()" id="logouttext" style="text-decoration: none;">Logout</button></p>
+      </div>
+  </div>
+  <!-- Login/signup section close-->
+
+
+
+    <!-- Login Side bar Imp -->
+    <div id="loginside">
+      <div id = "closelogin">
+          <img class="close" src="https://atlona.com/wp-content/uploads/2016/08/close-button.png" alt="close">
+      </div>
+      <div id="loginimgbanner">
+          <img src="https://www.licious.in/img/default/logo-white.png" alt="logo">
+          <!-- <img id="liciousloginbanner" src="https://www.licious.in/img/default/user-login.png" alt="Liciousbanner"> -->
+      </div>
+      <div class="logininfo">
+          <div class="logheading">
+              <p>Sign In/Sign Up</p>
+          </div>
+          <div class="loginform">
+              <div class="form">
+                  <input type="number" onkeypress="getMobile()" id="mobile" placeholder="Enter Mobile Number">
+                  <hr>
+              </div>
+              <h3 id="otphead">
+                  Enter OTP
+              </h3>
+              <div class="otp">
+                  <input type="number" onkeypress="getOtp()" id="onetimepass" placeholder="Enter OTP">
+                  <hr id="line">
+                  <!-- <input type="button" placeholder="Get OTP"> -->
+              </div>
+              
+          <div id="proceed">
+              <a href="#"><button id="confirmLogin">proceed Via OTP</button></a>
+          </div>
+          <p class="signing">
+              By signing in you agree to our <a class="tC" href="#">terms and conditions</a>
+          </p>
+          </div>
+          
+      </div>
+
+  <!-- Login Side bar close -->
+
+
+  </body>
   <script src="test.js"></script>
 </html>

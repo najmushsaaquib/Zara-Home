@@ -11,7 +11,21 @@ body {
   padding: 25px;
 }
 
-/* ----------Zara Image Logo Style Stars Here ----------*/
+
+::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #111;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #474747;
+    border-radius: 10px;
+  }
+
+/* ! ----------Zara Image Logo Style Stars Here ----------*/
 
 #logo {
   position: relative;
@@ -23,11 +37,12 @@ body {
   height: 20px;
   width: 300px;
 }
+/* ! ----------Zara Image Logo Style Ends Here---------- */
 
-/* ----------Zara Image Logo Style Ends Here----------*/
+
+
 
 /* ----------Input Container Style Starts here ----------*/
-
 #input-container {
   display: flex;
   height: 60px;
@@ -53,11 +68,16 @@ body {
   cursor: pointer;
 }
 
-input {
+input, select {
   height: 39.35px;
   width: 234px;
   padding: 5px 10px;
   border: 1px solid black;
+  background-color: white;
+  cursor: pointer;
 }
 
-/* ----------Input Container Style Ends here ----------*/
+
+
+
+/* ! ----------Input Container Style Ends here ----------*/
