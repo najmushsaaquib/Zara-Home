@@ -34,9 +34,9 @@ const footer = () =>{
                 <div class="policies">
                     <div><a href="https://static.zarahome.net/8/static4/itxwebstandard/TC/GB/en.pdf?20170919040002" target="_blank">TERMS $ CONDITIONS</a></div>
                     <div><a href="https://static.zarahome.net/8/static4/itxwebstandard/PP/US.pdf" target="_blank">PRIVACY POLICY</a></div>
-                    <div><a href="#" target="_blank">COOKIES POLICY</a></div>
+                    <div><a href="https://static.zarahome.net/8/staticContent4/PDF/PC/V_en.pdf?20220329020527" target="_blank">COOKIES POLICY</a></div>
                     <div><a href="#" target="_blank">COOKIES SETTINGS</a></div>
-                    <div><a href="#" target="_blank">LEGAL MENTIONS</a></div>
+                    <div><a href="https://static.zarahome.net/8/staticContent4/PDF/LEGALNOTICE/WW/en.pdf?20220329020527" target="_blank">LEGAL MENTIONS</a></div>
                 </div>
             </div>
         </div>
@@ -44,8 +44,8 @@ const footer = () =>{
             <div class="followus"><h4 class="underlineHead">COMPANY</h4></div>
             <div>
                 <div class="policies">
-                    <div><a href="#" target="_blank">WORK WITH US</a></div>
-                    <div><a href="#" target="_blank">PRESS</a></div>
+                    <div><a href="https://www.inditexcareers.com/portalweb/en/home" target="_blank">WORK WITH US</a></div>
+                    <div><a href="https://press.zarahome.com/ECOMPressSite/login.html" target="_blank">PRESS</a></div>
                 </div>
             </div>
 
@@ -56,7 +56,7 @@ const footer = () =>{
             <div>
                 <div class="policies">
                     <div><a href="#" target="_blank">CONTACT US</a></div>
-                    <div><a href="#" target="_blank">GUEST PURCHASE</a></div>
+                    <div><a href="https://www.zarahome.com/ww/guest-orders.html" target="_blank">GUEST PURCHASE</a></div>
                 </div>
             </div>
         </div>
