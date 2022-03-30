@@ -1,0 +1,54 @@
+#menubar{
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    /* left: 0; */
+    width: 370px;
+    height: 100vh;
+    z-index: 2000;
+    transition: .5s ease;
+    box-shadow: rgb(0, 0, 0) 0px 30px 90px;
+}
+.menuactive{
+    left: 0!important;
+}
+
+#closemenu{
+    /* border: 1px solid red; */
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 300px;
+    font-size: 50px;
+    cursor: pointer;
+    
+}
+.close{
+    width: 150px;
+    height: 100vh;
+}
+#logo2{
+    border: 1px solid black;
+    height: 80px;
+}
+#logo2>img{
+    height: 90%;
+    width: 80%;
+    padding: 20px;
+    cursor: pointer;
+    transform: translateX(20px);
+    transition: all .5s ease;
+    /* animation: animate 1s linear; */
+
+}
+/* @keyframes animate {
+    0%{
+        transform: translateX(30px);
+
+    }
+    100%{
+        transform: translateX(0);
+    }
+} */
+

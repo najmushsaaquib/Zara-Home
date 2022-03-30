@@ -10,6 +10,7 @@
     
     <!-- style -->
     <link rel="stylesheet" href="/assets/styles/zarahome.css">
+    <link rel="stylesheet" href="/assets/styles/categorysidebar.css">
 
     <!-- Google Material icons -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -23,7 +24,7 @@
     <!-- mainContainer -->
 
     <div id="container">
-        <a href="/assets/pages/the-art-of-living.html"><img src="https://static.zarahome.net/8/static4/itxwebstandard/dto_imagen/home/slider/desktop/SS22.jpg?20220329020527&imwidth=1250&impolicy=zarahome-itxmedium" alt=""></a>
+        <img id="homepageimg" src="https://static.zarahome.net/8/static4/itxwebstandard/dto_imagen/home/slider/desktop/SS22.jpg?20220329020527&imwidth=1250&impolicy=zarahome-itxmedium" alt="">
         <div id="center"><img src="/assets/images/the art of living.png" alt=""></div>
 
         <!-- Navbar -->
@@ -42,7 +43,20 @@
     </div>
 
     <!-- Important -->
-    <div id="menubar"></div>
+
+        <div id="menubar">
+            <div id = "closemenu">
+                <img class="close" src="/assets/images/transparentIMG.png" alt="close">
+            </div>
+
+            <div id="logo2">
+                <img src="https://static.zarahome.net/8/static4/itxwebstandard/images/logos/logo.svg?20220330020507" alt="">
+            </div>
+
+            <div id="categoriesDiv">
+                
+            </div>
+        </div>
 </body>
 </html>
 <script type="module">
@@ -50,13 +64,19 @@
 import header from "/components/header.js"
 import footer from "/components/footer.js"
 
-// console.log('footer:', footer)
-// console.log('header:', header)
 let nav = document.getElementById("header")
 nav.innerHTML = header()
 
 let foot = document.getElementById("footerDiv")
-foot.innerHTML = footer() 
+foot.innerHTML = footer()
+
+let searchclick = document.getElementById("searchBox");
+searchclick.addEventListener("click", searchClick)
+function searchClick (){
+    window.location.href = "/assets/pages/search.html"
+}
+
+
 
 </script>
-<script src="/assets/scripts/zarahome.js"></script>
+<script src="/assets/scripts/zarahome.js" type="module"></script>

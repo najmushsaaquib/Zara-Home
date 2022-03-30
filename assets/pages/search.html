@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product search | Zara Home United Kingdom</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="https://www.zarahome.com/static/itxwebstandard/22.0.1/images/favicon.png?t=2022032418102457db77364736" type="image/x-icon">
+        <!-- Google Material icons -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+        <!-- fontAwsome -->
+        <script src="https://kit.fontawesome.com/b832c13233.js" crossorigin="anonymous"></script>
+
+        <link rel="stylesheet" href="/assets/styles/search.css">
+        <link rel="stylesheet" href="/assets/styles/categorysidebar.css">
+</head>
+<body>
+    <!-- mainContainer -->
+
+    <div id="container">
+
+        <!-- searchBar -->
+        <input type="search" name="search" id="searchBar" autocomplete="off" onkeyup="searchText()">
+        <div id ="searchResults">
+
+        </div>
+
+        <!-- Navbar -->
+        <div id="navbar">
+            <div id="menudiv"><i id="menu" class="material-icons">
+                menu
+                </i></div>
+            <div id="logo"><a href="/assets/pages/zarahome.html"><img src="/assets/images/logo.png" alt="zara-home"></a></div>
+            <div id="searchBox"><div>SEARCH</div><div id="searchline"></div></div>
+            <div id="login_basketDiv">
+                <div id="loginicon">
+                    <div><img src="/assets/images/login icon.png" alt="login"></div>
+                    <div><p>LOG IN</p></div>
+                </div>
+                <div id="basketicon">
+                    <div><img src="/assets/images/basket icon 2.png" alt="basket"></div>
+                    <div><p>BASKET<span id="basketCount"><span>(1)</span></span></p></div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+    <!-- empty_box -->
+
+    <div id="box"></div>
+
+    <!-- footer -->
+    <div id="footerDiv">
+      
+    </div>
+
+</body>
+</html>
+<script type="module">
+// import header from "/components/header.js"
+import footer from "/components/footer.js"
+
+// let nav = document.getElementById("header")
+// nav.innerHTML = header()
+
+let foot = document.getElementById("footerDiv")
+foot.innerHTML = footer()
+
+let searchclick = document.getElementById("searchBox");
+searchclick.addEventListener("click", searchClick)
+function searchClick (){
+    window.location.href = "/assets/pages/search.html"
+}
+
+</script>
+<script src="/assets/scripts/zarahome.js" type="module"></script>
+<script src="/assets/scripts/search.js"></script>
+<script src="/assets/Data/allData.js"></script>
+
