@@ -64,7 +64,7 @@
                 menu
                 </i></div>
             <div id="logo"><a href="/assets/pages/zarahome.html"><img src="/assets/images/logo.png" alt="zara-home"></a></div>
-            <div id="searchBox"><div><a href="#">SEARCH</div></a><a href="#"><div id="searchline"></div></a></div>
+            <div id="searchBox"><div>SEARCH</div><div id="searchline"></div></div>
             <div id="login_basketDiv">
                 <div id="loginicon">
                     <div><img src="/assets/images/login icon.png" alt="login"></div>
@@ -96,4 +96,10 @@
     let foot = document.getElementById("footerDiv")
     foot.innerHTML = footer() 
     
+    let searchclick = document.getElementById("searchBox");
+searchclick.addEventListener("click", searchClick)
+function searchClick (){
+    window.location.href = "/assets/pages/search.html"
+}
     </script>
+    <script src="/assets/scripts/zarahome.js" type="module"></script>
