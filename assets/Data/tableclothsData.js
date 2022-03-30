@@ -119,4 +119,3 @@ let tableclothsData = [
 localStorage.setItem("tablecloths", JSON.stringify(tableclothsData));
 
 
-//Zara Home.html
