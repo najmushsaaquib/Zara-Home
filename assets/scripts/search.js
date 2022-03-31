@@ -1,10 +1,10 @@
 let searchResult = document.getElementById("searchResults")
-let search = JSON.parse(localStorage.getItem("search_Term"))||[]
-console.log('search:', search)
+let keywords = JSON.parse(localStorage.getItem("search_Term"))||[]
+// console.log('keywords:', keywords)
 
-function showItems(search){
+function showItems(keywords){
     document.querySelector("#searchResults").innerHTML = "";
-    search.forEach(function(el){
+    keywords.forEach(function(el){
         let div = document.createElement("div")
         div.setAttribute("class", "searchResultDiv")
         let div1 = document.createElement("div");
@@ -15,7 +15,7 @@ function showItems(search){
         let productName = document.createElement("h5")
         productName.innerText = el.name;
         let productPrice = document.createElement("p")
-        productPrice.innerText = `${el.price} ₹`;
+        productPrice.innerText = `₹ ${el.price}`;
         let infoBtn = document.createElement("button")
         infoBtn.setAttribute("class","infoBtn")
         infoBtn.addEventListener("click",function(){
@@ -35,11 +35,11 @@ function showItems(search){
 function searchText(){
    
     let text = document.getElementById("searchBar").value.toUpperCase().trim();
-    console.log('text:', text)
-    let fillerData = search.filter(function(e,index){
+    // console.log('text:', text)
+    let fillerData = keywords.filter(function(e,index){
         return e.name.toUpperCase().includes(text);
     });
-    console.log(fillerData);
+    // console.log(fillerData);
 
     showItems(fillerData)
 
