@@ -247,32 +247,34 @@ let data = [
 ];
 let container = document.getElementById("productContainer");
 
-function appendData(data) {
-  container.innerHTML = null;
-  data.forEach((element) => {
-    let div = document.createElement("div");
-    div.setAttribute("id", "mainDiv");
-    div.addEventListener("click", () => {
-      console.log(element);
-    });
-    let img = document.createElement("img");
-    img.src = element.img;
-    img.style.width = "550px";
-    img.style.height = "300px";
-    img.setAttribute("id", "productImage");
 
-    let title = document.createElement("h6");
-    title.innerText = element.name;
-    title.setAttribute("id", "productName");
+// function appendData(data,parent) {
+//   parent.innerHTML = null;
+//   data.forEach((element) => {
+//     let div = document.createElement("div");
+    
+//     div.setAttribute("id", "mainDiv");
+//     div.addEventListener("click", () => {
+//       console.log(element);
+//     });
+//     let img = document.createElement("img");
+//     img.src = element.img;
+//     img.style.width = "550px";
+//     img.style.height = "300px";
+//     img.setAttribute("id", "productImage");
 
-    let price = document.createElement("p");
-    price.innerText = `₹ ${element.price} `;
-    price.setAttribute("id", "price");
+//     let title = document.createElement("h6");
+//     title.innerText = element.name;
+//     title.setAttribute("id", "productName");
 
-    div.append(img, title, price);
-    container.append(div);
-  });
-}
+//     let price = document.createElement("p");
+//     price.innerText = `₹ ${element.price} `;
+//     price.setAttribute("id", "price");
+
+//     div.append(img, title, price);
+//     parent.append(div);
+//   });
+// }
 
 let filterData = document.getElementById("filter");
 let oneG = document.getElementById("mainDiv");
@@ -306,6 +308,7 @@ function oneGridAppend(data) {
   data.forEach((element) => {
     let div = document.createElement("div");
     div.setAttribute("id", "oneMainDiv");
+    div.style.marginBottom="-50px"
     div.addEventListener("click", () => {
       console.log(element);
     });
@@ -328,33 +331,41 @@ function oneGridAppend(data) {
   });
 }
 
-let two = document.createElement("div");
-two.innerText = "1";
-two.setAttribute("class", "numGrid");
-two.addEventListener("click", () => {
+let one = document.createElement("div");
+one.innerText = "1";
+one.setAttribute("class", "numGrid");
+one.addEventListener("click", () => {
   container.style.display = "grid";
   container.style.gridTemplateColumns = "repeat(1, 1fr)";
   oneGridAppend(data);
 });
 
-let four = document.createElement("div");
-four.innerText = `2 `;
-four.setAttribute("class", "numGrid");
-four.addEventListener("click", () => {
+let two = document.createElement("div");
+two.style.marginLeft="2px"
+two.innerText = `2`;
+two.setAttribute("class", "numGrid");
+two.addEventListener("click", () => {
   container.style.width = "100%";
   container.style.display = "grid";
   container.style.gridTemplateColumns = "repeat(2,1fr)";
   oneGridAppend(data);
 });
-viewDiv.append(view, two, four);
 
+
+viewDiv.append(view, one,two);
+ let lineDiv=document.createElement('div')
+ lineDiv.style.height="11px"
+ lineDiv.style.width="0px"
+lineDiv.style.border="1px solid black"
+lineDiv.style.marginTop="10px"
 // ! Multi Grid functionality Ends here
 
 // ! Filter functionality starts here
 let filter = document.createElement("button");
 filter.innerHTML = `+FILTERS`;
 filter.setAttribute("id", "filterMe");
-div.append(item, viewDiv, filter);
+div.append(item, viewDiv,lineDiv,filter);
+
 filterData.append(div);
 
 // ! Filter functionality starts here
@@ -397,6 +408,13 @@ high.addEventListener("click", () => {
   });
   oneGridAppend(data);
 });
+
+
+
+document.querySelector("#clear").addEventListener("click",()=>
+{
+ location.reload()
+})
 
 
 
