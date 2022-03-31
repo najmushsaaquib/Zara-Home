@@ -1,172 +1,624 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;1,300&display=swap');
 
-*{
-    font-family: Lato;
-}
-
-
-#loginside{
-    background-color: white;
-    position: fixed;
-    top: 0;
-    right: -100%;
-    /* right: 0; */
-    width: 400px;
-    height: 100vh;
-    z-index: 2000;
-    transition: .5s ease;
-    box-shadow: rgb(0, 0, 0) 0px 30px 90px;
-    /* background-color: black; */
-    background-image: url(https://www.licious.in/img/default/user-login.png);
-    /* background-image: url(https://www.licious.in/img/default/logo-white.png); */
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.loginactive{
-    right: 0!important;
-}
 
-#logintext{
-    border: none;
-    outline: none;
-    background-color: white;
-    cursor: pointer;
-}
+/* ! Shopping Text above main container */
 
-#closelogin{
-    position: fixed;
-    display: none;
-    top: 0;
-    right: 30px;
-    font-size: 50px;
-    cursor: pointer;
-    
-}
-
-.close{
-    width: 30px;
-    height: 30px;
-}
-
-#logouttext{
-    font-family: Lato;
-    font-size: 13px;
-    font-weight: bolder;
-    margin-left: 5px;
-    color: black;
-    border: none;
-    background-color: white;
-    cursor: pointer;
-    display: none;
-    margin-top: 28px;
-}
-#logouttext:hover{
-
-    color: red;
-    border: none;
-}
-
-#loginimgbanner{
-    /* border: 1px solid black; */
-    height: 280px;
-    margin-left: 20px;
-    margin-top: 20px;
-    
-}
-
-#liciousloginbanner{
-    width: 100%;
-    height: 10px;
-}
-
-.logininfo{
-    /* border: 1px solid white; */
-    background-color: white;
-    width: 90%;
-    margin: auto;
-    height: 100vh;
-    margin-top: 5px;
-    border-radius: 8px;
-}
-.logheading{
-    /* border: 1px solid darkblue; */
-    width: 55%;
-}
-.loginform{
-    margin-top: 5px;
-    /* border: 1px solid red; */
-    height: 50%;
-}
-.logheading>p{
-font-size: 25px;
-margin: auto;
-padding: 10px;
-}
-
-.form{
-    /* border: 1px solid black; */
-    height: 65px;
-}
-#mobile{
-    margin-left: 8px;
-  width: 95%;
-  height: 59px;
-  font-size: 19px;
-  color: black;
-  border: none;
-}
-#otphead{
-    font-size: 17px;
-    margin-top: 20px;
-    margin-left: 8px;
-}
-.otp{
-    
-    /* border: 1px solid black; */
-    height: 65px;
-}
-#onetimepass{
-    margin-left: 8px;
+#baasket {
+    height: 10vh;
     width: 95%;
-  height: 59px;
-  font-size: 19px;
-  color: black;
-  border: none;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.common-basket span {
+    font-weight: bold;
+}
+
+.common-basket {
+    width: 50%;
+    height: 100%;
+    /* background-color: rgb(156, 156, 156); */
+    padding: 12px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    border-bottom: 2px solid rgb(206, 206, 206);
+
 
 }
-#line{
-    margin-top: 0px;
+
+.common-basket:hover{
+    border-bottom: 3px solid black;
+    cursor: pointer;
+    transition: 0.8s
+
 }
-#proceed{
-    /* border: 1px solid black; */
-    height: 48px;
-    width: 93%;
+
+.active{
+    border-bottom: 3px solid black;
+
+}
+
+
+
+/* ! Shopping Text above main container ends here */
+
+
+
+/* ! Main container box styles starts here */
+#container {
+    height: 80vh;
+    width: 95%;
     margin: auto;
-    border-radius: 4px;
-    margin-top: 10px;
+    /* border: 1px solid tomato; */
+    overflow: auto;
+    display: grid;
+    /* justify-content: space-between; */
+    text-align: center;
+    align-items: center
 }
-#confirmLogin{
-    width: 100%;
-    height: 48px;
-    border-radius: 4px;
-    font-size: 20px;
-    border: none;
-    background-color: lightgray;
-    color: white;
-    font-family: sans-serif;
-    font-weight: 600;
+
+.fa-bag-shopping{
+    font-size: 265px;
+    margin-bottom: 30px
+}
+
+#bag p{
+    font-size: 18px;
+}
+
+#left-cont{
+    width: 70%;
+    height: 100%;
+    background-color:teal;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+#right-cont{
+    width: 26%;
+    height: 100%;
+    background-color:blue;
+    
+}
+
+
+/* ! Main container box styles ends here */
+
+.fas{
     cursor: pointer;
 }
-#confirmLogin:hover{
-    background-color: crimson;
+
+
+
+
+
+
+
+
+.menu {
+  width: 300px;
+  height: 700px;
+  margin-top: 25px;
+  overflow: hidden;
 }
 
-.signing{
-    font-size: 15px;
-    margin-left: 20px;
-    margin-top: 20px;
-    color: rgb(92, 88, 88);
+.item {
+  overflow: hidden;
 }
-.tC{
-    text-decoration: none;
-    color: crimson;
+
+.btn {
+  display: block;
+  padding: 1px 20px;
+  font-weight: 600;
+  font-size: 18px;
+   background: white;
+   color: rgb(48, 46, 46);
+   position: relative;
+   letter-spacing: 1px;
+   cursor: pointer;
+}
+
+.ubtn {
+  display: block;
+  padding: 1px 20px;
+   font-weight: 600;
+   font-size: 18px;
+   background: white;
+   color: rgb(48, 46, 46);
+   position: relative;
+   letter-spacing: 1px;
+
+}
+
+.item a:hover {
+   color: #888b8d;
+}
+
+.smenu {
+  background: white;
+  overflow: hidden;
+  transition: max-height 0.3s;
+  max-height: 0;
+}
+
+.sbmenu {
+  background: white;
+  overflow: hidden;
+  transition: max-height 0.3s;
+  max-height: 0;
+}
+
+.smenu a {
+  display: block;
+  padding: 1px 25px;
+  color: black;
+  font-size: 14px;
+  margin: 4px 15px;
+  position: relative;
+}
+
+.sbmenu>a {
+  display: block;
+  padding: 1px 25px;
+  color: black;
+  font-size: 12px;
+  margin: 4px 40px;
+  position: relative;
+}
+
+.smenu a:hover {
+  color: #888b8d;
+}
+
+.item:target .smenu {
+  max-height: 50em;
+}
+
+.smenu:target .sbmenu {
+  max-height: 50em;
+}
+
+.alast {
+  font-weight: normal;
+  font-size: 15px;
+}
+
+.salast>a {
+  font-size: 13px;
+  padding: 0px 26px;
+}
+
+
+
+/* body */
+#cart_container {
+  z-index: 0;
+}
+#mainB {
+  border: 1px solid transparent;
+  width: 100%;
+}
+
+#mainB > button {
+  padding: 1.2% 19.5%;
+  /* margin-left: 1%; */
+  background-color: transparent;
+  border: 0px solid transparent;
+  border-bottom: 1px solid lightgray;
+  font-weight: 600;
+  cursor: pointer;
+}
+#mainB > button:hover {
+  border-bottom: 2px solid black;
+}
+#card {
+  margin-top: 2%;
+  margin-left: 1.5%;
+  width: 71%;
+  display: inline-block;
+}
+
+#pay {
+  border: 1px solid transparent;
+  margin-top: 1.5%;
+  margin-left: 4.5%;
+  width: 20%;
+  height: 100%;
+  display: inline-block;
+  vertical-align: top;
+  font-family: "Poppins", sans-serif;
+}
+#Item {
+  font-weight: bold;
+  font-size: 20px;
+  padding: 4px 0;
+}
+
+#lText1_div {
+  padding: 12px 0;
+}
+
+#lText1 {
+  border: 1px solid transparent;
+  font-size: 14px;
+  color: #1e1e1e;
+  margin-left: 2%;
+  display: inline-block;
+  color: #777;
+}
+
+#total {
+  border: 1px solid transparent;
+  display: inline-block;
+  font-size: 14px;
+  color: #1e1e1e;
+  margin-left: 0.8%;
+  color: #777;
+}
+
+#lText2_div {
+  padding: 12px 0;
+}
+
+#lText2 {
+  display: inline-block;
+  border: 1px solid transparent;
+  font-weight: bold;
+  margin: 4% 0% 0% 3%;
+}
+
+#total2{
+  display: inline-block;
+  border: 1px solid transparent;
+  margin-left: 32%;
+  font-weight: bold;
+  margin-top: -20%;
+}
+
+#cText {
+  font-size: 13px;
+  color: #777;
+  margin-top: 15%;
+  margin-left: 3%;
+  /* opacity: 60%; */
+}
+
+#pay > button {
+  padding: 4% 5%;
+  width: 105%;
+  margin-top: 5%;
+  font-size: 12px;
+  font-weight: bold;
+  background-color: rgb(22, 20, 20);
+  color: rgb(243, 241, 241);
+  border: 0;
+  text-align: center;
+  cursor: pointer;
+}
+
+#pay > button:hover {
+  background-color: #3d3d3d;
+}
+#product {
+  display: grid;
+  grid-template-columns: repeat(3,32%);
+  gap: 2%;
+}
+#minus {
+  display: inline-block;
+}
+.circle {
+  display: inline-block;
+  margin-left: 10px;
+  padding-top: 2px;
+  border: 1px solid black;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: black;
+  color: white;
+  text-align: center;
+  opacity: 100%;
+  box-sizing: border-box;
+}
+#plus {
+  display: inline-block;
+  margin-left: 10px;
+}
+#priceDiv {
+  display: inline-block;
+  margin-left: 2.2%;
+  margin-top: -8%;
+}
+#iconDiv {
+  display: inline-block;
+  margin-left: 57%;
+  opacity: 90%;
+}
+#mainDiv {
+  position: relative ;
+}
+#image {
+  display: block;
+  width: 100%;
+  height: 390px;
+}
+.overlay {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color: #008CBA;
+  overflow: hidden;
+  width: 100%;
+  height:0;
+  transition: .5s ease;
+}
+.mainDiv:hover .overlay {
+  bottom: 0;
+  height: 100%;
+}
+
+.overlayContent {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+#remove {
+  position: absolute ;
+  right: 4%;
+  top: 2.5%;
+  color: rgb(54, 54, 54);
+  cursor: pointer;
+}
+ #basket {
+   font-family: monospace;
+   font-size: 17px;
+   font-weight: normal;
+   letter-spacing: 0.28px;
+   width: 51%;
+   text-align: center;
+ }
+ #later {
+  font-family: monospace;
+  font-size: 17px;
+  font-weight: normal;
+  letter-spacing: 0.28px;
+  width: 47%;
+}
+#title {
+  font-family: 'Source Sans 3', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  margin-left: 5px;
+  padding: 7px 0;
+}
+#price {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 900;
+  font-size: 16px;
+  padding: 7px 0;
+}
+.ref {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 12px;
+  opacity: 80%;
+   margin-left: 2%;
+}
+hr {
+  opacity: 60%;
+}
+
+/* !--------------------------------------FOOTER --------------------------------------*/
+
+#footer {
+  margin-top: 50px;
+  padding: 50px;
+  border-top: 1px dashed #ddd;
+}
+#footer p {
+  text-align: center;
+  font-weight: 400;
+}
+#foo_container {
+  width: 50%;
+  margin: 0px auto;
+  padding: 20px 0 45px 0;
+}
+/* #############footer newsletter############# */
+#newsletter {
+  margin: 10px auto 0 auto;
+  padding: 2px;  
+}
+#foo_task {
+  color: #888;
+  line-height: 1px;
+  transform: scale(0.8, 0.9);
+}
+#foo_input {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #1e1e1e;
+  width: 100%;
+  padding-top: 0px;
+}
+#foo_input:focus {
+  padding: 12px 0;
+  border-bottom: 2px solid #1e1e1e;
+  transition:border-bottom .2s, padding .3s;
+}
+
+/* #############footer social############# */
+#foo_social {
+  margin : 60px auto;
+  width: 80%;
+  display: flex;
+  gap: 10px;
+}
+#foo_social p {
+  color: #444;
+}
+#foo_social_left,
+#foo_social_right {
+  width: 50%;
+}
+.foo_social_icon {
+  display: flex;
+  gap: 5%;
+  padding: 25px 0;
+}
+.foo_social_icon > div:hover {
+  opacity: 0.6;
+}
+.foo_social_icon_right {
+  width: 33%;
+  margin: auto;
+}
+#foo_social img {
+  width: 70%;   
+}
+
+/* #############foo_about############# */
+#foo_about {
+  display: flex;
+  padding: 0 40px;
+}
+.foo_about_items {
+  width: 33%;
+}
+.foo_about_header {
+  text-decoration: underline;
+  text-align: center;
+  line-height: 40px;
+}
+.foo_about_list {
+  list-style-type: none;
+  text-align: center;
+}
+.foo_about_list > li {
+  font-size: 10px;
+  color: #777;
+  line-height: 20px;
+  font-weight: 400;
+  /* transform: scaleY(.9); */
+  letter-spacing:0.28px;
+}
+.foo_about_list > li:hover {
+  text-decoration: underline;
+  color: #222;
+}
+
+#footer {
+  margin-top: 50px;
+  padding: 50px;
+  border-top: 1px dashed #ddd;
+}
+#footer p {
+  text-align: center;
+  font-weight: 400;
+}
+#foo_container {
+  width: 50%;
+  margin: 0px auto;
+  padding: 20px 0 45px 0;
+}
+/* #############footer newsletter############# */
+#newsletter {
+  margin: 10px auto 0 auto;
+  padding: 2px;  
+}
+#foo_task {
+  color: #888;
+  line-height: 1px;
+  transform: scale(0.8, 0.9);
+}
+#foo_input {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #1e1e1e;
+  width: 100%;
+  padding-top: 0px;
+}
+#foo_input:focus {
+  padding: 12px 0;
+  border-bottom: 2px solid #1e1e1e;
+  transition:border-bottom .2s, padding .3s;
+}
+
+/* #############footer social############# */
+#foo_social {
+  margin : 60px auto;
+  width: 80%;
+  display: flex;
+  gap: 10px;
+}
+#foo_social p {
+  color: #444;
+}
+#foo_social_left,
+#foo_social_right {
+  width: 50%;
+}
+.foo_social_icon {
+  display: flex;
+  gap: 5%;
+  padding: 25px 0;
+}
+.foo_social_icon > div:hover {
+  opacity: 0.6;
+}
+.foo_social_icon_right {
+  width: 33%;
+  margin: auto;
+}
+#foo_social img {
+  width: 70%;   
+}
+
+/* #############foo_about############# */
+#foo_about {
+  display: flex;
+  padding: 0 40px;
+}
+.foo_about_items {
+  width: 33%;
+}
+.foo_about_header {
+  text-decoration: underline;
+  text-align: center;
+  line-height: 40px;
+}
+.foo_about_list {
+  list-style-type: none;
+  text-align: center;
+}
+.foo_about_list > li {
+  font-size: 10px;
+  color: #777;
+  line-height: 20px;
+  font-weight: 400;
+  /* transform: scaleY(.9); */
+  letter-spacing:0.28px;
+}
+.foo_about_list > li:hover {
+  text-decoration: underline;
+  color: #222;
 }

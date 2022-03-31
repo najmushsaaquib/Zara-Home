@@ -7,68 +7,119 @@
     <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
     <link rel="icon" href="/favicon.png" type="image/x-icon" />
     <link rel="stylesheet" href="test.css" />
-    <title>Testing Environment</title>
-  </head>
-  <body>
+    
+    
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@200;300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@200;300;400&family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.0.0/css/all.css"
+    />
+    <title>Shopping Basket</title>
+    </head>
+    
+    <body>
+  
+
+        <div id="baasket">
+            <div id="shopping" class="common-basket " >
+    
+                <span id="shopBasket" >SHOPPING BASKET (0)</span>
+    
+            </div>
+            <div id="buylater" class="common-basket" >
+    
+                <span>BUY LATER (0)</span>
+    
+            </div>
+        </div>
 
 
 
-    <!-- Login/signup section -->
-    <div id="tsd3">
-      <div class="login">
-          <img src="https://www.licious.in/img/default/profile_icon.svg" alt="User">
-      </div>
-      <div id="login">
-      <p><button id="logintext" style="text-decoration: none;">Login</button></p>
-      </div>
-      <div id="logout">
-          <p><button onclick="logoutFun()" id="logouttext" style="text-decoration: none;">Logout</button></p>
-      </div>
-  </div>
-  <!-- Login/signup section close-->
 
 
-
-    <!-- Login Side bar Imp -->
-    <div id="loginside">
-      <div id = "closelogin">
-          <img class="close" src="https://atlona.com/wp-content/uploads/2016/08/close-button.png" alt="close">
-      </div>
-      <div id="loginimgbanner">
-          <img src="https://www.licious.in/img/default/logo-white.png" alt="logo">
-          <!-- <img id="liciousloginbanner" src="https://www.licious.in/img/default/user-login.png" alt="Liciousbanner"> -->
-      </div>
-      <div class="logininfo">
-          <div class="logheading">
-              <p>Sign In/Sign Up</p>
-          </div>
-          <div class="loginform">
-              <div class="form">
-                  <input type="number" onkeypress="getMobile()" id="mobile" placeholder="Enter Mobile Number">
-                  <hr>
-              </div>
-              <h3 id="otphead">
-                  Enter OTP
-              </h3>
-              <div class="otp">
-                  <input type="number" onkeypress="getOtp()" id="onetimepass" placeholder="Enter OTP">
-                  <hr id="line">
-                  <!-- <input type="button" placeholder="Get OTP"> -->
-              </div>
-              
-          <div id="proceed">
-              <a href="#"><button id="confirmLogin">proceed Via OTP</button></a>
-          </div>
-          <p class="signing">
-              By signing in you agree to our <a class="tC" href="#">terms and conditions</a>
-          </p>
-          </div>
-          
-      </div>
-
-  <!-- Login Side bar close -->
-
-
-  </body>
+        <div id="cart_container">
+            <!-- <div id="mainB">
+                <button id = "basket">SHOPPING BASKET(0)</button>
+                <button id = "later">BUY LATER(0)</button>
+            </div> -->
+            <div id="card">
+                <div id="product"></div>
+            </div>
+            <div id="pay">
+                <div id="Item">0 &nbsp;<span>ITEM</span></div>
+                <hr>
+                <div id="lText1_div">
+                  <div id="lText1">Total items: including tax</div>
+                  <div id="total">0 &euro;</div>
+                </div>
+                <div #lText2_div>
+                  <div id="lText2">TOTAL:</div>
+                  <div id="total2">0 &euro; *</div>
+                </div>
+                <div id="cText">DO YOU HAVE A PROMOTIONAL CODE? Enter it when you reach the payment page</div>
+                <button id="btn">PROCESS ORDER</button>
+            </div>
+        </div>
+    
+        <div id="footer">
+            <div id="foo_container">
+                <div id="newsletter">
+                    <p id="foo_task"> JOIN OUR NEWSLETTER - ENTER YOUR EMAIL ADDRESS</p>
+                    <input type="email" onfocus="" name="newsletter" id="foo_input">
+                </div>
+                <div id="foo_social">
+                    <div id="foo_social_left">
+                        <p>Follow us on</p>
+                        <div class="foo_social_icon">
+                            <div><a href="https://www.facebook.com/zarahome" target="blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111392.png" alt=""></a></div>
+                            <div><a href="https://www.instagram.com/zarahome/" target="blank"><img src="https://cdn-icons-png.flaticon.com/512/87/87390.png" alt=""></a></div>
+                            <div><a href="https://www.pinterest.es/zarahome/" target="blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733622.png" alt=""></a></div>
+                            <div><a href="https://www.youtube.com/channel/UCrBndgD3vCicJ0nLRoKCCaA" target="blank"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384086.png" alt=""></a></div>
+                            <div><a href="https://twitter.com/zarahome" target="blank"><img src="https://cdn-icons.flaticon.com/png/512/3128/premium/3128212.png?token=exp=1639505038~hmac=305275f7cabc466e92e957cb4b11455f" alt=""></a></div>
+                            <div><a href="https://open.spotify.com/user/fbune3k41mta54xtdc3d8v7xu?si=FQQ6HDU7RZWT_yqDIVYAmw&nd=1" target="blank"><img src="https://cdn-icons.flaticon.com/png/512/717/premium/717421.png?token=exp=1639505062~hmac=e7663d5bb89631b0fb5818fd260e7496" alt=""></a></div>
+                        </div>
+                        
+                    </div>
+                    <div id="foo_social_right">
+                        <p>Download our app</p>
+                        <div class="foo_social_icon foo_social_icon_right">
+                            <div><a href="https://apps.apple.com/es/app/zarahome-shop-online/id474175190" target="blank"><img src="https://cdn-icons-png.flaticon.com/512/731/731985.png" alt=""></a></div>
+                            <div><a href="https://play.google.com/store/apps/details?id=com.inditex.ecommerce.zarahome.android" target="blank"><img src="https://cdn-icons-png.flaticon.com/512/152/152753.png" alt=""></a></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="foo_about">
+                    <div id="foo_about_left" class="foo_about_items">
+                        <h6 class="foo_about_header"> POLICIES</h6>
+                        <ul class="foo_about_list">
+                            <li>TERMS AND CONDITIONS</li>
+                            <li>PRIVACY POLICY</li>
+                            <li>COOKIES POLICY</li>
+                            <li>COOKIES SETTINGS</li>
+                            <li>LEGAL MENTIONS</li>
+                        </ul>
+                    </div>
+                    <div id="foo_about_center" class="foo_about_items">
+                        <h6 class="foo_about_header"> COMPANY</h6>
+                        <ul class="foo_about_list">
+                            <li>WORK WITH US</li>
+                            <li>PRESS</li>
+                        </ul>
+                    </div>
+                    <div id="foo_about_right" class="foo_about_items">
+                        <h6 class="foo_about_header"> CONTACT</h6>
+                        <ul class="foo_about_list">
+                            <li>CONTACT US</li>
+                            <li>GUEST PURCHASE</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    
+    </html>
+    <!-- <script src="cart.js"></script> -->
   <script src="test.js"></script>
 </html>

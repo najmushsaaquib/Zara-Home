@@ -1,0 +1,104 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* ! Scroolbar styles */
+::-webkit-scrollbar {
+    width: 9px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: white;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #474747;
+    border-radius: 10px;
+  }
+/* ! Scroolbar styles */
+
+/* ! Shopping Text above main container */
+
+#baasket {
+    height: 10vh;
+    width: 95%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.common-basket {
+    width: 50%;
+    height: 100%;
+    /* background-color: rgb(156, 156, 156); */
+    padding: 12px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    border-bottom: 2px solid rgb(206, 206, 206);
+
+
+}
+
+.common-basket:hover{
+    border-bottom: 3px solid black;
+    cursor: pointer;
+    transition: 0.8s
+
+}
+
+.active{
+    border-bottom: 3px solid black;
+
+}
+
+
+
+/* ! Shopping Text above main container */
+
+
+
+/* ! Main container box styles starts here */
+#container {
+    height: 80vh;
+    width: 95%;
+    margin: auto;
+    /* border: 1px solid tomato; */
+    overflow: auto;
+    display: grid;
+    /* justify-content: space-between; */
+    text-align: center;
+    align-items: center
+}
+
+.fa-bag-shopping{
+    font-size: 265px;
+    margin-bottom: 30px
+}
+
+#bag p{
+    font-size: 18px;
+}
+
+#left-cont{
+    width: 70%;
+    height: 100%;
+    background-color:teal;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+#right-cont{
+    width: 26%;
+    height: 100%;
+    background-color:blue;
+    
+}
+
+
+/* ! Main container box styles ends here */

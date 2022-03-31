@@ -247,32 +247,34 @@ let data = [
 ];
 let container = document.getElementById("productContainer");
 
-function appendData(data) {
-  container.innerHTML = null;
-  data.forEach((element) => {
-    let div = document.createElement("div");
-    div.setAttribute("id", "mainDiv");
-    div.addEventListener("click", () => {
-      console.log(element);
-    });
-    let img = document.createElement("img");
-    img.src = element.img;
-    img.style.width = "550px";
-    img.style.height = "300px";
-    img.setAttribute("id", "productImage");
+// function appendData(data) {
+//   container.innerHTML = null;
+//   data.forEach((element) => {
+//     let div = document.createElement("div");
+//     div.setAttribute("id", "mainDiv");
+//     div.addEventListener("click", () => {
+//       console.log(element);
+//     });
+//     let img = document.createElement("img");
+//     img.src = element.img;
+//     img.style.width = "550px";
+//     img.style.height = "300px";
+//     img.setAttribute("id", "productImage");
 
-    let title = document.createElement("h6");
-    title.innerText = element.name;
-    title.setAttribute("id", "productName");
+//     let title = document.createElement("h6");
+//     title.innerText = element.name;
+//     title.setAttribute("id", "productName");
 
-    let price = document.createElement("p");
-    price.innerText = `₹ ${element.price} `;
-    price.setAttribute("id", "price");
+//     let price = document.createElement("p");
+//     price.innerText = `₹ ${element.price} `;
+//     price.setAttribute("id", "price");
 
-    div.append(img, title, price);
-    container.append(div);
-  });
-}
+//     div.append(img, title, price);
+//     container.append(div);
+//   });
+// }
+
+
 
 let filterData = document.getElementById("filter");
 let oneG = document.getElementById("mainDiv");
@@ -299,10 +301,10 @@ view.style.marginRight = "8px";
 
 // ! Multi Grid functionality Starts here
 
-oneGridAppend(data);
+oneGridAppend(data,container);
 
-function oneGridAppend(data) {
-  container.innerHTML = null;
+function oneGridAppend(data,parent) {
+  parent.innerHTML = null;
   data.forEach((element) => {
     let div = document.createElement("div");
     div.setAttribute("id", "oneMainDiv");
@@ -324,7 +326,7 @@ function oneGridAppend(data) {
     price.setAttribute("id", "price");
 
     div.append(img, title, price);
-    container.append(div);
+    parent.append(div);
   });
 }
 
@@ -334,7 +336,7 @@ two.setAttribute("class", "numGrid");
 two.addEventListener("click", () => {
   container.style.display = "grid";
   container.style.gridTemplateColumns = "repeat(1, 1fr)";
-  oneGridAppend(data);
+  oneGridAppend(data,container);
 });
 
 let four = document.createElement("div");
@@ -344,7 +346,7 @@ four.addEventListener("click", () => {
   container.style.width = "100%";
   container.style.display = "grid";
   container.style.gridTemplateColumns = "repeat(2,1fr)";
-  oneGridAppend(data);
+  oneGridAppend(data,container);
 });
 viewDiv.append(view, two, four);
 
@@ -386,7 +388,7 @@ low.addEventListener("click", () => {
   data.sort((a, b) => {
     return a.price - b.price;
   });
-  oneGridAppend(data);
+  oneGridAppend(data,container);
 });
 let high = document.querySelector("#highest");
 high.addEventListener("click", () => {
@@ -395,7 +397,7 @@ high.addEventListener("click", () => {
   data.sort((a, b) => {
     return b.price - a.price;
   });
-  oneGridAppend(data);
+  oneGridAppend(data,container);
 });
 
 
