@@ -1,53 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="/../favicon.png" type="image/x-icon" />
     <link rel="icon" href="/../favicon.png" type="image/x-icon" />
-    <title>Document</title>
-    <link rel="stylesheet" href="../styles/besheet_duvet.css">
+    <link rel="stylesheet" href="../styles/footer.css" />
+    <link rel="stylesheet" href="../styles/besheet_duvet.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link  rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.0.0/css/all.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-</head>
-<body>
-    <div id="filter">
-    </div>
-     
-   <div id="productContainer">
+    <link rel="stylesheet" href="/assets/styles/header.css">
+    <title>Duet Covers</title>
 
-   </div> 
-   <!-- Side Bar filter start here -->
-   <div id="loginside">
-    <div id="fil">
-    <p class="sideP">FILTERS</p>
-     </div>
-     <div id="FilterPrice">
-    <p class="sideP">BY PRICE</p>
+  </head>
+  <body>
+    <div id="headerDiv"></div>
+    <div id="mainProductContainer">
     </div>
-        <div id=h2l>
-           <div>
-            <input type="radio" id="highest" name="fav_language" value="Highest">
-            <label for="html">HIGHEST</label><br>
-           </div> 
-           <div>
-            <input type="radio" id="lowest" name="fav_language" value="Lowest">
-            <label for="css">LOWEST</label><br>
-           </div>
-            </div>
 
-            <div id="lowerDiv">
-                <div id="clear">
-                <button id="clearBtn">Reset</button>
-                </div>
-                <div id="close">
-                    <button>Close</button>
-                </div>
-            </div>
-    </div>
-    <!-- Side bar filter end here -->
-</body>
+
+    <div id="foot"></div>
+    
+    <!-- !The container in which the data is being appended starts here -->
+
+    <!-- !The container in which the data is being appended ends here -->
+
+    <!-- !Side Bar filter start here -->
+    
+    <!-- !Side bar filter end here -->
+
+
+  </body>
 </html>
-<script src="../scripts/bedsheet_duvet.js">
 
+<script type="module">
+  import {
+    mainHtml,
+    getData,
+    showOne,
+    showTwo,
+    openFilterSide,
+    closeFilterSide,
+    sortLow,
+    sortHigh,
+    resetFilter,
+    defaultAppend,
+    showOneGrid,
+    
+  } from "/../components/productdata.js";
+
+  import footer from "/components/footer.js"
+  import header from "/components/header.js"
+  
+  var data = await getData(
+    `https://mocki.io/v1/084c1a7b-a615-4845-9d51-4d174772cd99`
+  );
+  console.log(data);
+  document.querySelector("#mainProductContainer").innerHTML = mainHtml();
+  document.querySelector("#foot").innerHTML = footer();
+  var container = document.querySelector("#productContainer");
+  document.querySelector("#headerDiv").innerHTML = header();
+  defaultAppend(data, container)
+  showOne(data, container);
+  showTwo(data, container);
+  openFilterSide();
+  closeFilterSide();
+  sortLow(data, container);
+  sortHigh(data, container);
+  resetFilter();
 </script>
+<!-- <script src="../scripts/bedsheet_duvet.js"></script> -->

@@ -4,9 +4,61 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
-    <link rel="icon" href="/favicon.png" type="image/x-icon" />
-    <title>Dining | Zara Home</title>
+    <link rel="shortcut icon" href="/../favicon.png" type="image/x-icon" />
+    <link rel="icon" href="/../favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../styles/besheet_duvet.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Duet Covers</title>
   </head>
-  <body></body>
+  <body>
+    <div id="header"></div>
+    <div id="mainProductContainer">
+    </div>
+
+
+    <div id="footer"></div>
+    
+    <!-- !The container in which the data is being appended starts here -->
+
+    <!-- !The container in which the data is being appended ends here -->
+
+    <!-- !Side Bar filter start here -->
+    
+    <!-- !Side bar filter end here -->
+
+
+  </body>
 </html>
+
+<script type="module">
+  import {
+    setFilter,
+    setLoginSide,
+    getData,
+    showOne,
+    showTwo,
+    openFilterSide,
+    closeFilterSide,
+    sortLow,
+    sortHigh,
+    resetFilter,
+    defaultAppend
+  } from "/../components/productdata.js";
+
+  var data = await getData(
+    `https://mocki.io/v1/084c1a7b-a615-4845-9d51-4d174772cd99`
+  );
+  console.log(data);
+  var container = document.querySelector("#productContainer");
+  document.querySelector("#filter").innerHTML = setFilter();
+  document.querySelector("#loginside").innerHTML = setLoginSide();
+  defaultAppend(data, container)
+  showOne(data, container);
+  showTwo(data, container);
+  openFilterSide();
+  closeFilterSide();
+  sortLow(data, container);
+  sortHigh(data, container);
+  resetFilter();
+</script>
+<!-- <script src="../scripts/bedsheet_duvet.js"></script> -->

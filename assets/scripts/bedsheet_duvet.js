@@ -245,42 +245,20 @@ let data = [
       "https://static.zarahome.net/8/photos4/2021/I/4/1/p/0105/088/300/0105088300_2_7_1.jpg?t=1630579472761",
   },
 ];
+
 let container = document.getElementById("productContainer");
 
-
-let filterData = document.getElementById("filter");
-let oneG = document.getElementById("mainDiv");
-
-let div = document.createElement("div");
-div.setAttribute("id", "filterDiv");
-
-let item = document.createElement("div");
-let itemp = document.createElement("span")
-    itemp.innerText = `${data.length} Items  |`
-    itemp.setAttribute("class", "small-font")
-
-item.append(itemp);
-
-let viewDiv = document.createElement("div");
-viewDiv.setAttribute("id", "viewDiv");
-let view = document.createElement("div");
-let viewp = document.createElement("span")
-    viewp.innerText = `VIEW`
-    viewp.setAttribute("class", "small-font")
-
-view.append(viewp)    
-view.style.marginRight = "8px";
+// let filterData = document.getElementById("filter");
 
 // ! Multi Grid functionality Starts here
+oneGridAppend(data, container);
 
-oneGridAppend(data,container);
-
-function oneGridAppend(data,parent) {
+function oneGridAppend(data, parent) {
   parent.innerHTML = null;
   data.forEach((element) => {
     let div = document.createElement("div");
     div.setAttribute("id", "oneMainDiv");
-    div.style.marginBottom="-50px"
+    div.style.marginBottom = "-50px";
     div.addEventListener("click", () => {
       console.log(element);
     });
@@ -303,74 +281,50 @@ function oneGridAppend(data,parent) {
   });
 }
 
-let one = document.createElement("div");
-one.innerText = "1";
-one.setAttribute("class", "numGrid");
-one.addEventListener("click", () => {
-  container.style.display = "grid";
-  container.style.gridTemplateColumns = "repeat(1, 1fr)";
-  oneGridAppend(data,container);
-});
+  let one = document.querySelector("#one");
+  one.addEventListener("click", () => {
+    container.style.display = "grid";
+    container.style.gridTemplateColumns = "repeat(1, 1fr)";
+    oneGridAppend(data, container);
+  });
 
-let two = document.createElement("div");
-two.style.marginLeft="2px"
-two.innerText = `2`;
-two.setAttribute("class", "numGrid");
-two.addEventListener("click", () => {
-  container.style.width = "100%";
-  container.style.display = "grid";
-  container.style.gridTemplateColumns = "repeat(2,1fr)";
-  oneGridAppend(data,container);
-});
-
-
-viewDiv.append(view, one,two);
- let lineDiv=document.createElement('div')
- lineDiv.style.height="11px"
- lineDiv.style.width="0px"
-lineDiv.style.border="1px solid black"
-lineDiv.style.marginTop="10px"
-// ! Multi Grid functionality Ends here
+  let two = document.querySelector("#two");
+  two.addEventListener("click", () => {
+    container.style.width = "98%";
+    container.style.display = "grid";
+    container.style.gridTemplateColumns = "repeat(2,1fr)";
+    oneGridAppend(data, container);
+  });
 
 // ! Filter functionality starts here
-let filter = document.createElement("button");
-filter.innerHTML = `+FILTERS`;
-filter.setAttribute("id", "filterMe");
-div.append(item, viewDiv,lineDiv,filter);
+  var closeFilter = document.querySelector("#close");
+  closeFilter.addEventListener("click", loginClose);
+  function loginClose() {
+    var loginArea = document.querySelector("#loginside");
+    loginArea.classList.remove("loginactive");
+    //closeFilter.style.display = "none"
+  }
 
-filterData.append(div);
-
-// ! Filter functionality starts here
-
-var cLogin = document.querySelector("#close");
-cLogin.addEventListener("click", loginClose);
-function loginClose() {
-  var loginArea = document.querySelector("#loginside");
-  loginArea.classList.remove("loginactive");
-  //cLogin.style.display = "none"
-}
 
 // ! filter button functionality
-
-var loginBtn = document.querySelector("#filterMe");
-loginBtn.addEventListener("click", loginOpen);
-function loginOpen() {
-  var cLogin = document.querySelector("#closelogin");
-  var loginArea = document.querySelector("#loginside");
-  loginArea.classList.add("loginactive");
-}
-
+  var openFilter = document.querySelector("#open-filter");
+  openFilter.addEventListener("click", loginOpen);
+  function loginOpen() {
+    var closeFilter = document.querySelector("#closelogin");
+    var loginArea = document.querySelector("#loginside");
+    loginArea.classList.add("loginactive");
+  }
 // ! Sorting functionality Starts here
+  let low = document.querySelector("#lowest");
+  low.addEventListener("click", () => {
+    console.log("Hello");
 
-let low = document.querySelector("#lowest");
-low.addEventListener("click", () => {
-  console.log("Hello");
-
-  data.sort((a, b) => {
-    return a.price - b.price;
+    data.sort((a, b) => {
+      return a.price - b.price;
+    });
+    oneGridAppend(data, container);
   });
-  oneGridAppend(data,container);
-});
+
 let high = document.querySelector("#highest");
 high.addEventListener("click", () => {
   console.log("High");
@@ -378,16 +332,14 @@ high.addEventListener("click", () => {
   data.sort((a, b) => {
     return b.price - a.price;
   });
-  oneGridAppend(data,container);
+  oneGridAppend(data, container);
 });
 
 
 
-document.querySelector("#clear").addEventListener("click",()=>
-{
- location.reload()
-})
+  document.querySelector("#clear").addEventListener("click", () => {
+    location.reload();
+  });
 
-
-
+  
 // ! Sorting functionality Ends here

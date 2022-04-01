@@ -1,6 +1,7 @@
 const footer = () =>{
-    return `<div id="footer">
-
+    return `<div id="box"></div>
+    
+ <div id="footer">
     <div id="socialMedia">
 
         <div>
