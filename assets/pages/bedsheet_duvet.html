@@ -6,33 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="/../favicon.png" type="image/x-icon" />
     <link rel="icon" href="/../favicon.png" type="image/x-icon" />
-    <link rel="stylesheet" href="../styles/footer.css" />
-    <link rel="stylesheet" href="../styles/besheet_duvet.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link  rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.0.0/css/all.css"/>
+    <link rel="stylesheet" href="../styles/mainProduct.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.0.0/css/all.css"
+    />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <link rel="stylesheet" href="/assets/styles/header.css">
-    <link rel="stylesheet" href="/assets/styles/categorysidebar.css">
+    <link rel="stylesheet" href="/assets/styles/footer.css">
     <title>Duet Covers</title>
-
   </head>
   <body>
     <div id="headerDiv"></div>
-    <div id="mainProductContainer">
-    </div>
 
-
-    <div id="foot"></div>
-    <div id="sidebarmaindiv"></div>
     <!-- !The container in which the data is being appended starts here -->
+    <div id="mainProductContainer"></div>
 
+    <div id="sidebarmaindiv"></div>
     <!-- !The container in which the data is being appended ends here -->
 
     <!-- !Side Bar filter start here -->
-    
+    <div id="foot"></div>
+
     <!-- !Side bar filter end here -->
-
-
   </body>
 </html>
 
@@ -49,25 +48,20 @@
     resetFilter,
     defaultAppend,
     showOneGrid,
-    storeSingleItem
-    
   } from "/../components/productdata.js";
 
   import footer from "/components/footer.js"
-  import header from "/components/header.js"
-  import sideber from "/components/categoriesSidebar.js"
-  // console.log(sideber)
-  
+  document.querySelector("#foot").innerHTML = footer();
+
+
+  // ! Appending main Data
   var data = await getData(
-    `https://mocki.io/v1/10682c67-abd1-4549-a494-b921249fda90`
+    `https://mocki.io/v1/5a4cde67-44c8-47eb-a7fb-6effd0fd0656`
   );
   console.log(data);
   document.querySelector("#mainProductContainer").innerHTML = mainHtml();
-  document.querySelector("#foot").innerHTML = footer();
   var container = document.querySelector("#productContainer");
-  document.querySelector("#headerDiv").innerHTML = header();
-  // document.querySelector("#sidebarmaindiv").innerHTML = sideber();
-  defaultAppend(data, container)
+  defaultAppend(data, container);
   showOne(data, container);
   showTwo(data, container);
   openFilterSide();
@@ -75,8 +69,13 @@
   sortLow(data, container);
   sortHigh(data, container);
   resetFilter();
-  // let item = storeSingleItem()
-
 </script>
-<!-- <script src="/assets/scripts/zarahome.js" type="module" ></script> -->
-<!-- <script src="../scripts/bedsheet_duvet.js"></script> -->
+
+<script>
+  function takeMe(el) {
+    let cartArray = [];
+    cartArray.push(el);
+    localStorage.setItem("productDetail", JSON.stringify(cartArray));
+    window.location.href = "/../assets/pages/basket.html";
+  }
+</script>

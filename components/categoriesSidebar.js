@@ -20,15 +20,15 @@ const sidebar = () =>{
         <div>
             <a href="#"><p id="bedroom">BEDROOM</p></a>
             <div id="openRoom" class="divCon">
-                <a href="#"><p>DUVET COVERS</p></a>
-                <a href="#"><p>FLAT SHEETS</p></a>
-                <a href="#"><p>PILLOWCASES</p></a>
-                <a href="#"><p>FITTED SHEETS</p></a>
-                <a href="#"><p>QUILTS</p></a>
-                <a href="#"><p>BEDSPREADS</p></a>
-                <a href="#"><p>BLANKETS</p></a>
-                <a href="#"><p>CUSHIONS</p></a>
-                <a href="#"><p>CURTAINS</p></a>
+                <a href="/assets/pages/bedsheet_duvet.html"><p>DUVET COVERS</p></a>
+                <a href="/assets/pages/flatsheet.html"><p>FLAT SHEETS</p></a>
+                <a href="/assets/pages/bedsheet_duvet.html"><p>PILLOWCASES</p></a>
+                <a href="/assets/pages/bedsheet_duvet.html"><p>FITTED SHEETS</p></a>
+                <a href="/assets/pages/bedsheet_duvet.html"><p>QUILTS</p></a>
+                <a href="/assets/pages/bedsheet_duvet.html"><p>BEDSPREADS</p></a>
+                <a href="/assets/pages/blankets.html"><p>BLANKETS</p></a>
+                <a href="/assets/pages/bedsheet_duvet.html"><p>CUSHIONS</p></a>
+                <a href="/assets/pages/bedsheet_duvet.html"><p>CURTAINS</p></a>
             </div>
         </div>
 

@@ -1,3 +1,4 @@
+let flag;
 const getData = async (url) => {
   try {
     let res = await fetch(url);
@@ -10,46 +11,62 @@ const getData = async (url) => {
 };
 
 function defaultAppend(data, parent) {
-  parent.innerHTML=null;
-  parent.style.display="grid";
-  parent.style.gridTemplateColumns= "auto auto";
+  parent.innerHTML = null;
+  parent.style.display = "grid";
+  parent.style.gridTemplateColumns = "auto auto";
   data.map((el) => {
-    parent.innerHTML += `
-    <div id="oneMainDiv">
-    <div id="imgDiv">
-    <img src=${el.img} alt="" style="cursor:pointer" id="singleImg">
-    </div>
-    <p id="productName"> ${el.name}</p>
-            <p id="price" >${el.price}</p>
-            </div>
-    
-            `;
+    let div = document.createElement("div");
+    div.id = "oneMainDiv";
+    div.addEventListener("click", function () {
+      takeMe(el);
+    });
+    let imgDiv = document.createElement("div");
+    imgDiv.id = "imgDiv";
+    let image = document.createElement("img");
+    image.src = el.img;
+    let nam = document.createElement("p");
+    nam.textContent = el.name;
+    nam.id = "productName";
+    let price = document.createElement("p");
+    price.textContent = `₹ ${el.price}`;
+    price.id = "price";
+
+    imgDiv.append(image);
+    div.append(imgDiv, nam, price);
+    parent.append(div);
   });
   document.querySelector("#item-length").innerText = `${data.length} ITEMS`;
 }
 
-function storeSingleItem(el) {
-  console.log("hi");
-}
+function storeSingleItem(el) {}
 
-function showOneGrid(data,parent){
-  console.log("hii")
+function showOneGrid(data, parent) {
+  console.log("hii");
 
-  parent.innerHTML=null;
-  parent.style.display="grid";
-  parent.style.gridTemplateColumns= "auto";
+  parent.innerHTML = null;
+  parent.style.display = "grid";
+  parent.style.gridTemplateColumns = "auto";
   // parent.style.imgWidth="100%"
   data.map((el) => {
-    parent.innerHTML += `
-    <div id="oneDiv">
-    <img src=${el.img} alt="" id="oneImage">
-    <h6 id="productNameOne"> ${el.name}</h6>
-            <p id="price" >${el.price}</p>
-            </div>
-            `;
+    let div = document.createElement("div");
+    div.id = "oneDiv";
+    div.addEventListener("click", function () {
+      takeMe(el);
+    });
+
+    let image = document.createElement("img");
+    image.src = el.img;
+    let nam = document.createElement("p");
+    nam.textContent = el.name;
+    nam.id = "productNameOne";
+    let price = document.createElement("p");
+    price.textContent = `₹ ${el.price}`;
+    price.id = "price";
+
+    div.append(image, nam, price);
+    parent.append(div);
   });
   document.querySelector("#item-length").innerText = `${data.length} ITEMS`;
-
 }
 
 //!  Function to append data in the main body ends here
@@ -58,6 +75,7 @@ function showOneGrid(data,parent){
 function showOne(data, container) {
   let one = document.querySelector("#one");
   one.addEventListener("click", () => {
+    flag = true;
     showOneGrid(data, container);
   });
 }
@@ -68,7 +86,8 @@ function showOne(data, container) {
 function showTwo(data, container) {
   let two = document.querySelector("#two");
   two.addEventListener("click", () => {
-    console.log("hii")
+    console.log("hii");
+    flag = false;
     defaultAppend(data, container);
   });
 }
@@ -106,7 +125,12 @@ function sortLow(data, container) {
     data.sort((a, b) => {
       return a.price - b.price;
     });
-    defaultAppend(data, container);
+
+    if (flag === true) {
+      showOneGrid(data, container);
+    } else {
+      defaultAppend(data, container);
+    }
   });
 }
 
@@ -118,7 +142,12 @@ function sortHigh(data, container) {
     data.sort((a, b) => {
       return b.price - a.price;
     });
-    defaultAppend(data, container);
+    // defaultAppend(data, container);
+    if (flag === true) {
+      showOneGrid(data, container);
+    } else {
+      defaultAppend(data, container);
+    }
   });
 }
 
@@ -130,7 +159,6 @@ function resetFilter() {
 // ! Sorting functionality ends here
 
 // ! Function for getting  Data for HTML
-
 
 function mainHtml() {
   return `<div id="filter">
@@ -155,21 +183,21 @@ function mainHtml() {
     <p class="sideP">FILTERS</p>
   </div>
   <div id="FilterPrice">
-    <p class="sideP">BY PRICE</p>
+    <p class="sidePrice">BY PRICE</p>
   </div>
   <div id="h2l">
-    <div>
+    <div class="lableDiv" >
       <input
         type="radio"
         id="highest"
         name="fav_language"
         value="Highest"
       />
-      <label for="html">HIGHEST</label><br />
+      <span class="lable-css">HIGHEST</span>
     </div>
-    <div>
+    <div class="lableDiv" >
       <input type="radio" id="lowest" name="fav_language" value="Lowest" />
-      <label for="css">LOWEST</label><br />
+      <span class="lable-css">LOWEST</span>
     </div>
   </div>
   
@@ -197,5 +225,6 @@ export {
   sortHigh,
   resetFilter,
   defaultAppend,
-  showOneGrid,storeSingleItem
+  showOneGrid,
+  storeSingleItem,
 };

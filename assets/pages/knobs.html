@@ -16,8 +16,7 @@
       href="https://site-assets.fontawesome.com/releases/v6.0.0/css/all.css"
     />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <link rel="stylesheet" href="/assets/styles/footer.css">
-    <title>Kids</title>
+    <title>Knobs</title>
   </head>
   <body>
     <div id="headerDiv"></div>
@@ -50,13 +49,8 @@
     showOneGrid,
   } from "/../components/productdata.js";
 
-  import footer from "/components/footer.js"
-  document.querySelector("#foot").innerHTML = footer();
-
-
-  // ! Appending main Data
   var data = await getData(
-    `https://mocki.io/v1/f3702a8f-06cf-47fa-9a28-500b10854b4c`
+    `https://mocki.io/v1/aebe147a-6275-4dcb-a31f-df347af3f845`
   );
   console.log(data);
   document.querySelector("#mainProductContainer").innerHTML = mainHtml();
