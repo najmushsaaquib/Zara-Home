@@ -421,7 +421,6 @@ let allData = [
     img:"https://static.zarahome.net/8/photos4/2022/V/4/1/p/9530/014/051/9530014051_7_1_2.jpg?t=1646397006149",
     name:"LEOPARD JACQUARD BATHROBE",
     price:6999,
-   
     ref:"REF. 9530/014",
     discription: "Unisex cotton bathrobe with a jacquard animal print.",
     productImg1: "https://static.zarahome.net/8/photos4/2022/V/4/1/p/9530/014/051/9530014051_2_7_1.jpg?t=1646397006149",
