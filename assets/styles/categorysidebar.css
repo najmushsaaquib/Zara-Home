@@ -7,7 +7,7 @@
     width: 370px;
     height: 100vh;
     z-index: 2000;
-    transition: .5s ease;
+    transition: 1s ease;
     box-shadow: rgb(0, 0, 0) 0px 30px 90px;
     overflow-y: scroll;
 }
