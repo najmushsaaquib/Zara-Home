@@ -17,6 +17,9 @@ i {
   padding: 30px;
   gap: 5px;
 }
+#navbar:hover{
+    background-color:white;
+}
 #menudiv {
   /* border: 1px solid black; */
   width: fit-content;

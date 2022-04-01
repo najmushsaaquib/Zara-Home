@@ -1,9 +1,9 @@
-let art = document.getElementById("homepageimg");
-art.addEventListener("click", artofliving)
-function artofliving(){
-    window.location.href = "/assets/pages/the-art-of-living.html"
-}
-//----------------------------------------------------------------
+// let art = document.getElementById("homepageimg");
+// art.addEventListener("click", artofliving)
+// function artofliving(){
+//     window.location.href = "/assets/pages/the-art-of-living.html"
+// }
+// //----------------------------------------------------------------
 
 
 //sidebar code

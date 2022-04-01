@@ -12,6 +12,7 @@
     <link  rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.0.0/css/all.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" href="/assets/styles/header.css">
+    <link rel="stylesheet" href="/assets/styles/categorysidebar.css">
     <title>Duet Covers</title>
 
   </head>
@@ -22,7 +23,7 @@
 
 
     <div id="foot"></div>
-    
+    <div id="sidebarmaindiv"></div>
     <!-- !The container in which the data is being appended starts here -->
 
     <!-- !The container in which the data is being appended ends here -->
@@ -48,20 +49,24 @@
     resetFilter,
     defaultAppend,
     showOneGrid,
+    storeSingleItem
     
   } from "/../components/productdata.js";
 
   import footer from "/components/footer.js"
   import header from "/components/header.js"
+  import sideber from "/components/categoriesSidebar.js"
+  // console.log(sideber)
   
   var data = await getData(
-    `https://mocki.io/v1/084c1a7b-a615-4845-9d51-4d174772cd99`
+    `https://mocki.io/v1/10682c67-abd1-4549-a494-b921249fda90`
   );
   console.log(data);
   document.querySelector("#mainProductContainer").innerHTML = mainHtml();
   document.querySelector("#foot").innerHTML = footer();
   var container = document.querySelector("#productContainer");
   document.querySelector("#headerDiv").innerHTML = header();
+  // document.querySelector("#sidebarmaindiv").innerHTML = sideber();
   defaultAppend(data, container)
   showOne(data, container);
   showTwo(data, container);
@@ -70,5 +75,8 @@
   sortLow(data, container);
   sortHigh(data, container);
   resetFilter();
+  // let item = storeSingleItem()
+
 </script>
+<!-- <script src="/assets/scripts/zarahome.js" type="module" ></script> -->
 <!-- <script src="../scripts/bedsheet_duvet.js"></script> -->

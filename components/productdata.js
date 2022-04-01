@@ -17,14 +17,19 @@ function defaultAppend(data, parent) {
     parent.innerHTML += `
     <div id="oneMainDiv">
     <div id="imgDiv">
-    <img src=${el.img} alt="">
+    <img src=${el.img} alt="" style="cursor:pointer" id="singleImg">
     </div>
     <p id="productName"> ${el.name}</p>
             <p id="price" >${el.price}</p>
             </div>
+    
             `;
   });
   document.querySelector("#item-length").innerText = `${data.length} ITEMS`;
+}
+
+function storeSingleItem(el) {
+  console.log("hi");
 }
 
 function showOneGrid(data,parent){
@@ -192,5 +197,5 @@ export {
   sortHigh,
   resetFilter,
   defaultAppend,
-  showOneGrid
+  showOneGrid,storeSingleItem
 };
