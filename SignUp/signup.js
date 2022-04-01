@@ -80,7 +80,7 @@ window.addEventListener("click", outsideclick)
 
 
 function openmodal() {
-    console.log("dhhfiut")
+    
     modalbox.style.display = "block"
 }
 
@@ -176,7 +176,7 @@ function signupdata(e) {
     e.preventDefault()
    
     if (signname.value == "" || signemail.value == "" || signpassword.value == "") {
-        alert("invalid credentials")
+        alert("Invalid credentials, please fill the complete details")
     } else {
         let userdetails = {
 
@@ -232,7 +232,7 @@ function logindata(e) {
         if (users[i].email !== inputemail || users[i].password !== inputpass) {
             count++;
             if (count == users.length) {
-                alert("Login failed");
+                alert("Login failed,enter the valid details");
             }
         } else {
 
@@ -260,6 +260,8 @@ if(usersName==null){
     modallogin.innerHTML = "LOG-IN";
 }else{
     modallogin.innerHTML = usersName; 
+    modallgOut.innerHTML = "LOG-OUT"
+    
 }
 
 
