@@ -2,6 +2,9 @@ let appendInfo = JSON.parse(localStorage.getItem("info"))
 // console.log('appendInfo:', appendInfo)
 
 appendInfo.map(function(el){
+    document.getElementById("imagesBox").innerHTML="";
+    document.getElementById("contentDiv").innerHTML = "";
+
     let div1 = document.createElement("div")
     let productImg1 = document.createElement("img");
     productImg1.src = el.img;

@@ -11,6 +11,10 @@
     <!-- style -->
     <link rel="stylesheet" href="/assets/styles/theart.css">
     <link rel="stylesheet" href="/assets/styles/categorysidebar.css">
+    <link rel="stylesheet" href="/assets/styles/navbar2.css">
+    <link rel="stylesheet" href="/assets/styles/footer.css">
+    <link rel="stylesheet" href="/assets/styles/preloader.css">
+
     
 
     <!-- Google Material icons -->
@@ -21,6 +25,9 @@
 
 </head>
 <body>
+    <!-- preLoader -->
+    <div id="preloader"></div>
+
     <!-- mainContainer -->
 
     <div id="container">
@@ -62,22 +69,7 @@
         </div>
         <!-- Navbar -->
         <div id="navbar">
-            <div id="menudiv"><i id="menu" class="material-icons">
-                menu
-                </i></div>
-            <div id="logo"><a href="/assets/pages/zarahome.html"><img src="/assets/images/logo.png" alt="zara-home"></a></div>
-            <div id="searchBox"><div>SEARCH</div><div id="searchline"></div></div>
-            <div id="login_basketDiv">
-                <div id="loginicon">
-                    <div><img src="/assets/images/login icon.png" alt="login"></div>
-                    <div><p>LOG IN</p></div>
-                </div>
-                <div id="basketicon">
-                    <div><img src="/assets/images/basket icon 2.png" alt="basket"></div>
-                    <div><p>BASKET<span id="basketCount"><span>(1)</span></span></p></div>
-                </div>
-            </div>
-        </div>
+            
         </div>
 
     <!-- empty_box -->
@@ -95,15 +87,31 @@
             
         </div>
 
+        <!-- preloader JS -->
+
+        <script>
+            var loader = document.getElementById("preloader")
+            window.addEventListener("load", function(){
+                loader.style.display = "none"
+            })
+        </script>
+
 </body>
 </html>
 <script type="module">
     
     import footer from "/components/footer.js"
-        
+    import navbar2 from "/components/header2.js"
+    import sidebar2 from "/components/catsidebar2.js"
+
     let foot = document.getElementById("footerDiv")
-    foot.innerHTML = footer() 
+    foot.innerHTML = footer()
     
+    let nav = document.getElementById("navbar")
+    nav.innerHTML = navbar2()
+
+    let side = document.getElementById("sidebarmaindiv")
+    side.innerHTML = sidebar2()
     
 
 
@@ -113,4 +121,5 @@ function searchClick (){
     window.location.href = "/assets/pages/search.html"
 }
     </script>
-    <script src="/assets/scripts/zarahome.js" type="module"></script>
+    
+<script src="/assets/scripts/catsidebar2.js" type="module"></script>
