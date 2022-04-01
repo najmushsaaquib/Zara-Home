@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="/assets/styles/categorysidebar.css">
     <link rel="stylesheet" href="/assets/styles/navbar.css">
     <link rel="stylesheet" href="/assets/styles/footer.css">
+    <link rel="stylesheet" href="/assets/styles/preloader.css">
 
     <!-- Google Material icons -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -23,6 +24,9 @@
 
 </head>
 <body>
+    <!-- preLoader -->
+    <div id="preloader"></div>
+
     <!-- mainContainer -->
 
     <div id="container">
@@ -49,6 +53,17 @@
         <div id="sidebarmaindiv">
             
         </div>
+
+
+        <!-- preloader JS -->
+
+        <script>
+            var loader = document.getElementById("preloader")
+            window.addEventListener("load", function(){
+                loader.style.display = "none"
+            })
+        </script>
+
 </body>
 </html>
 <script type="module">

@@ -17,8 +17,24 @@
         <link rel="stylesheet" href="/assets/styles/navbar2.css">
         <link rel="stylesheet" href="/assets/styles/footer.css">
         <link rel="stylesheet" href="/assets/styles/categorysidebar.css">
+
+        
+    <style>
+        #preloader{
+    background: #000 url("/assets/images/Zara-home preloader.gif") no-repeat center center;
+    /* background-size: 20%; */
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+}
+    </style>
 </head>
 <body>
+      <!-- preLoader -->
+      <div id="preloader"></div>
+
     <!-- mainContainer -->
 
     <div id="container">
@@ -47,6 +63,15 @@
     <div id="sidebarmaindiv">
         
     </div>
+
+            <!-- preloader JS -->
+
+            <script>
+                var loader = document.getElementById("preloader")
+                window.addEventListener("load", function(){
+                    loader.style.display = "none"
+                })
+            </script>
 
 </body>
 </html>
