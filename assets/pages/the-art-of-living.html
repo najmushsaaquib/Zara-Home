@@ -120,6 +120,19 @@ searchclick.addEventListener("click", searchClick)
 function searchClick (){
     window.location.href = "/assets/pages/search.html"
 }
+
+
+let basket = document.getElementById("basketCount")
+    let count = JSON.parse(localStorage.getItem("cart")).length
+        basket.innerHTML = `(${count})`
+
+        
+        let addtocart = document.getElementById("addtocart")
+addtocart.addEventListener("click", cart)
+function cart(){
+    window.location.href="/assets/pages/cart.html"
+}
+
     </script>
     
 <script src="/assets/scripts/catsidebar2.js" type="module"></script>

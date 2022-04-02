@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+#containerBasket {
+  display: grid;
+  grid-template-columns: 55% 45%;
+  margin-top: 130px;
+}
+#basketImages {
+  height: 500px;
+}
+#information {
+  padding-left: 8%;
+  padding-right: 1%;
+}
+.images {
+  width: 100%;
+}
+h2 {
+  margin-left: 15px;
+  font-weight: 500;
+  line-height: 70px;
+}
+h3 {
+  margin-left: 15px;
+  font-weight: 500;
+  line-height: 70px;
+}
+#size {
+  width: 95%;
+  margin: auto;
+  height: 200px;
+  margin-bottom: 10px;
+  line-height: 70px;
+
+}
+p{
+  line-height: 30px;
+
+}
+
+#links{
+    margin-top: 25px;
+}
+#addToBasket {
+  width: 95%;
+  height: 35px;
+  margin-left: 2.6%;
+  font-size: 12px;
+  margin-top: 22px;
+  background-color: transparent;
+  border: none;
+  outline: 0.5px solid black;
+  cursor: pointer;
+}
+#addToBasket:hover {
+  background-color: black;
+  transition: 0.7ms;
+  color: white;
+}
+#links a {
+  text-decoration: none;
+  color: black;
+  font-size: 10;
+  margin: 3%;
+  font-weight: 100;
+  line-height: 30px;
+}
+
+#differentSize {
+  width: 100%;
+  height: 100%;
+
+  overflow: auto;
+}
+#differentSize > div {
+  border-top: none;
+  width: 100%;
+  height: 50px;
+  border-top: none;
+  cursor: pointer;
+}
+#price1 {
+  margin-left: 80%;
+}
+#price2 {
+  margin-left: 77%;
+}
+#price3 {
+  margin-left: 80%;
+}
+#differentSize > div:hover {
+  background-color: rgb(107, 105, 105);
+  transition: 0.5ms;
+  color: white;
+}
+#basketPrice3 {
+  border: 1px solid black;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}

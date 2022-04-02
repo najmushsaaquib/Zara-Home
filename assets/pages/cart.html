@@ -4,84 +4,110 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="/../favicon.png" type="image/x-icon" />
-    <link rel="icon" href="/../favicon.png" type="image/x-icon" />
-    <link rel="stylesheet" href="../styles/mainProduct.css" />
+    <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
+    <link rel="icon" href="/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="/assets/styles/footer.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.0.0/css/all.css"/>
+    <link rel="stylesheet" href="/assets/styles/preloader.css">
     <link rel="stylesheet" href="/assets/styles/categorysidebar.css">
     <link rel="stylesheet" href="/assets/styles/navbar2.css">
-    <link rel="stylesheet" href="/assets/styles/footer.css">
     <link rel="stylesheet" href="/assets/styles/preloader.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.0.0/css/all.css"/>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <title>Flat Sheets</title>
+    <link rel="stylesheet" href="/assets/styles/cart.css">
+    <title>Cart Page | Zara Home</title>
   </head>
   <body>
 
+   <!-- Preloader Div -->
 
-        <!-- Preloader Div -->
+   <div id="preloader"></div>
 
-        <div id="preloader"></div>
+   <!-- Preloader Div -->
 
-        <!-- Preloader Div -->
+   <div id="navbar"></div>
+
+    <div id="baasket">
+        <div id="shopping" class="common-basket " >
+
+            <span id="shopBasket" >SHOPPING BASKET (0)</span>
+
+        </div>
+        <div id="buylater" class="common-basket" >
+
+            <span>BUY LATER (0)</span>
+
+        </div>
+    </div>
+
+    
+   
+   
+   <div id="container">
+
+        <!-- <div id="bag">
+
+            <span> <i class="fa-thin fa-bag-shopping " id="shoppingBagIcon" ></i> </span>
+            <p>Your shopping basket is empty</p>
+        </div> -->
+    
+        <div id="left-cont"></div>
 
 
-        <div id="navbar"></div>
+        <div id="right-cont">
 
-    <!-- !The container in which the data is being appended starts here -->
-    <div id="mainProductContainer"></div>
+          <div id="pay">
+            <div id="Item"><h3 id="itemsText">0 &nbsp;ITEMS<h3/></div>
+            <div id="total-including-tax">
+                <p> Total items: including tax</p>
+                <p id="total-one" class="total-with-tax"> ₹ 1234</p>
+            </div>
+            <div id="grand-total">
+              <h4>TOTAL:</h4>
+              <p  id="total-twice" class="total-with-tax totaltwice">₹ 1234</p>
 
-    <div id="sidebarmaindiv"></div>
-    <!-- !The container in which the data is being appended ends here -->
+            </div>
+            <div id="promotionText">
+              <span> DO YOU HAVE A PROMOTIONAL CODE? Enter it when you reach the payment
+              page
+            </span>
+            </div>
+            <button id="processbtn">PROCESS ORDER</button>
+          </div>
+        </div>
 
-    <!-- !Side Bar filter start here -->
+
+        </div>
+      </div>
+
+
+       <!-- !Side Bar filter start here -->
     <div id="foot"></div>
 
-    <!-- !Side bar filter end here -->
     <div id="sidebarDiv"></div>
+    <!-- !Side bar filter end here -->
+
+    
 
   </body>
-</html>
+  <script src="/assets/scripts/cart.js"></script>
+  </html>
 
-<script type="module">
-  import {
-    mainHtml,
-    getData,
-    showOne,
-    showTwo,
-    openFilterSide,
-    closeFilterSide,
-    sortLow,
-    sortHigh,
-    resetFilter,
-    defaultAppend,
-    showOneGrid,
-  } from "/../components/productdata.js";
 
-  var data = await getData(
-    `https://mocki.io/v1/f3702a8f-06cf-47fa-9a28-500b10854b4c`
-  );
-  console.log(data);
-  document.querySelector("#mainProductContainer").innerHTML = mainHtml();
-  var container = document.querySelector("#productContainer");
-  defaultAppend(data, container);
-  showOne(data, container);
-  showTwo(data, container);
-  openFilterSide();
-  closeFilterSide();
-  sortLow(data, container);
-  sortHigh(data, container);
-  resetFilter();
-</script>
+  <script type="module" >
 
-<script>
-  function takeMe(el) {
-    let cartArray = [];
-    cartArray.push(el);
-    localStorage.setItem("productDetail", JSON.stringify(cartArray));
-    window.location.href = "/../assets/pages/basket.html";
-  }
-</script>
+let basket = document.getElementById("shopBasket")
+    let countItem = JSON.parse(localStorage.getItem("cart")).length
+        basket.innerHTML = `SHOPPING BASKET (${countItem})`
+
+  </script>
+
+
+
+
+
+
+
 
 
 <!-- preloader script -->
@@ -113,6 +139,7 @@
       window.location.href = "/assets/pages/search.html"
   }
       // search functionality
+
 
   let addtocart = document.getElementById("addtocart")
   addtocart.addEventListener("click", cart)

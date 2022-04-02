@@ -116,13 +116,13 @@ i{
 #appleicon:hover{
     color: grey;
 }
-#androidicon{
+#android_Icon{
 
     color: black;
     font-size: 25px;
     padding: 10px;
 }
-#androidicon:hover{
+#android_Icon:hover{
     color: grey;
 }
 
@@ -161,6 +161,7 @@ i{
 #android_Icon{
     width: 20px;
     height: 20px;
+    font-size: 55px;
     padding: 12px;
 }
 

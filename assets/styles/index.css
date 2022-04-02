@@ -5,13 +5,30 @@
 }
 
 body {
-  background-image: url(/assets/images/index.jpg);
+
+  background-image: url(https://static.zarahome.net/8/static4/itxwebstandard/dto_imagen/worldwide/index.jpg?20220402020507);
+
   background-repeat: no-repeat;
   background-size: cover;
   padding: 25px;
 }
 
-/* ----------Zara Image Logo Style Stars Here ----------*/
+
+::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #111;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #474747;
+    border-radius: 10px;
+  }
+
+/* ! ----------Zara Image Logo Style Stars Here ----------*/
+
 
 #logo {
   position: relative;
@@ -23,10 +40,6 @@ body {
   height: 20px;
   width: 300px;
 }
-
-/* ----------Zara Image Logo Style Ends Here----------*/
-
-/* ----------Input Container Style Starts here ----------*/
 
 #input-container {
   display: flex;
@@ -53,11 +66,15 @@ body {
   cursor: pointer;
 }
 
+
 input {
   height: 39.35px;
   width: 234px;
   padding: 5px 10px;
   border: 1px solid black;
+
+  background-color: white;
+  cursor: pointer;
 }
 
-/* ----------Input Container Style Ends here ----------*/
+

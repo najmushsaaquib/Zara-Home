@@ -71,6 +71,7 @@ import navbar2 from "/components/header2.js"
 import sidebar2 from "/components/catsidebar2.js"
 
 
+
 let foot = document.getElementById("footerDiv")
 foot.innerHTML = footer()
 
@@ -84,7 +85,23 @@ let searchclick = document.getElementById("searchBox");
 searchclick.addEventListener("click", searchClick)
 function searchClick (){
     window.location.href = "/assets/pages/search.html"
+
 }
+
+let addtocart = document.getElementById("addtocart")
+addtocart.addEventListener("click", cart)
+function cart(){
+    window.location.href="/assets/pages/cart.html"
+
+
+    
+}
+
+
+let basket = document.getElementById("basketCount")
+    let count = JSON.parse(localStorage.getItem("cart")).length
+        basket.innerHTML = `(${count})`
+
 
 </script>
 
