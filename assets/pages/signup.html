@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign In | Sign Up - Zara home</title>
+    <title>Sign In | Zara home</title>
     <!-- favicon -->
     <link rel="shortcut icon" href="https://www.zarahome.com/static/itxwebstandard/22.0.1/images/favicon.png?t=2022032418102457db77364736" type="image/x-icon">
     <!-- style -->
@@ -34,18 +34,13 @@
             <p class="regp">We will ask you for the necessary information to speed up the purchase process.
             </p>
             <P class="regp"> Can’t find your order? You might have purchased as a guest. Click<span><a id="here" href="/assets/pages/zarahome.html"> here</a></span> and we’ll tell you how to find it.</P>
-            <input type="email" placeholder="E-mail" required class="inputcell reqlength" id="inputemail"/>
+            <input type="email" placeholder="E-mail *" required class="inputcell reqlength" id="inputemail"/>
             <!-- <div id="box"> -->
             
             <label for="password"></label>
-            <input type="password" placeholder="Password" required class="inputcell reqlength" id="inputpass"/>
+            <input type="password" placeholder="Password *" required class="inputcell reqlength" id="inputpass"/>
             <i class="bi bi-eye-slash" id="togglePassword"></i>
             
-            <!-- <input type="checkbox" onclick="myFunction()" class="inputcell reqlength" id="signcheckbox" required> -->
-            <!-- <input type="password" name="password" id="password" /> -->
-            
-            <!-- </div> -->
-            <p class="reqlength">Have you forgotten your password?</p>
             <button id="loginbtn" class="buttn">LOG IN</button>
          
     
@@ -68,119 +63,10 @@
     
     </div>
     
-    <!-- signup part -->
     
-    
-    
-    <div id="modalbox1" class="modal1">
-    
-    
-    <div class="modalcontent1">
-        <span id="closingbtn1" class="close1">&times;</span>
-       <p class="create">CREATE YOUR ZARA HOME ACCOUNT </p>
-         <div class="radiobox">
-             <input type="radio"class="radio" name="gp1" value="ind"/>
-             <lable for="individual" class="ver">Individual</lable>
-    
-             <input type="radio" class="radio" name="gp1" value="com"/>
-             <lable for="company" class="ver">Company</lable>
-         </div>
-    
-          <div class="cenform">
-           <form action="#">
-    
-            <select class="counwidth inputcell">
-                <option>India</option>
-                <option>Brazil</option>
-                <option>Nepal</option>
-             </select>
-    
-            <input type="text" placeholder="Name" class="counwidth inputcell" id="signname" required />
-             <input type="email" placeholder="E-mail" class="counwidth inputcell" id="signemail" required/>
-             <div id="box">
-            
-             <!-- <input type="checkbox" onclick="myFunction2()" class="counwidth inputcell" id="signcheckbox" required> -->
-             <label for="password"></label>
-             <input type="password" placeholder="Password" class="counwidth inputcell" id="signpassword" required/>
-            <i class="bi bi-eye-slash" id="togglePassword2"></i>
-            </div>
-             <div  class="checkmargin" >
-                <input type="checkbox"  class="checkb"/>
-                <lable for="checkbox"class="ver1">I have read and accept the privacy policy</lable><br>
-        
-                <input type="checkbox" class="checkb"/>
-                <lable for="checkbox" class="ver1">I would like to receive news, notifications and offers from Zara Home</span>.</lable>
-    
-                <button id="createaccount" class="csignupbtn">CREATE ACCOUNT</button>
-            </div>
-           </form>
-    
-     
-          </div>
-          
-    
-          
-    </div>
-    
-    
-    
-    </div>
-
-<!-- //--------------------------------------------------// -->
-<div id="modalbox2" class="modal2">
-    
-    
-    <div class="modalcontent2">
-        <span id="closingbtn2" class="close2">&times;</span>
-       <p class="create">CREATE YOUR ZARA HOME ACCOUNT </p>
-         <div class="radiobox">
-             <input type="radio" class="radio" name="gp1" value="ind"/>
-             <lable for="individual" class="ver">Individual</lable>
-    
-             <input type="radio" class="radio" name="gp1" value="com" />
-             <lable for="company" class="ver">Company</lable>
-         </div>
-    
-          <div class="cenform">
-           <form action="#">
-    
-            <select  class="counwidth inputcell">
-                <option>India</option>
-                <option>Brazil</option>
-                <option>Nepal</option>
-             </select>
-    
-            <input type="text" placeholder="Company name" class="counwidth inputcell" required />
-            <input type="text" placeholder="VAT" class="counwidth inputcell" required />
-            <input type="text" placeholder="Name" class="counwidth inputcell" id="signname1" required />
-            <input type="text" placeholder="Surname(s)" class="counwidth inputcell" required />
-             <input type="email" placeholder="E-mail" class="counwidth inputcell" id="signemail1" required/>
-             <input type="password" placeholder="Password" class="counwidth inputcell" id="signpassword1" required/>
-    
-             <div  class="checkmargin">
-                <input type="checkbox"  class="checkb"/>
-                <lable for="checkbox"class="ver1">I have read and accept the privacy policy</lable><br>
-        
-                <input type="checkbox" class="checkb"/>
-                <lable for="checkbox" class="ver1">I would like to receive news, notifications and offers from <span id="extra">Zara Home</span>.</lable>
-      
-                <button id="createaccount1" class="csignupbtn">CREATE ACCOUNT</button>
-            </div>
-           </form>
-    
-     
-          </div>
-          
-    
-          
-    </div>
-    
-    
-    
-    </div>
 </body>
 </html>
-<script src="/assets/scripts/signup.js"></script>
+<script src="/assets/scripts/signup.js" type="module"></script>
 <script>
     var loader = document.getElementById("preloader")
     window.addEventListener("load", function(){

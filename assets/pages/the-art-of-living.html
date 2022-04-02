@@ -123,3 +123,19 @@ function searchClick (){
     </script>
     
 <script src="/assets/scripts/catsidebar2.js" type="module"></script>
+
+<script type="module">
+    let mLogin = document.getElementById("modallogin");
+    mLogin.addEventListener("click", modalL)
+    function modalL(){
+        window.location.href = "/assets/pages/signup.html"
+    }
+    
+    let user = JSON.parse(localStorage.getItem("loggedUsername"))||"LOG IN"
+    document.getElementById("modallogin").innerHTML = user;
+    
+    document.getElementById("modallgOut").addEventListener("click", function(){
+        localStorage.removeItem("loggedUsername")
+        window.location.reload();
+    })
+    </script>

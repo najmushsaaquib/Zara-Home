@@ -25,7 +25,7 @@
 
 
 #box{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     height: 40px;
     border: none;
     border-bottom: 0.3px solid grey;
