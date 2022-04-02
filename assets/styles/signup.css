@@ -12,6 +12,7 @@ height: 100vh;
 background: rgba(0,0,0,0.7);
 ;
 
+
 }
 .modal .modalcontent{
 
@@ -30,6 +31,7 @@ flex-direction: row;
 animation-name: modalopen;
 animation-duration: 1s;
 /* box-sizing: border-box; */
+box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 .close{
 float: right;
@@ -82,6 +84,7 @@ border: 1px solid black;
 padding: 2%;
 width: 85%;
 margin-top: 1%;
+cursor: pointer;
 }
 .buttn:hover{
 background: black;
@@ -259,7 +262,10 @@ width:10px;
 }
 #togglePassword2{
 margin-top: 54px;
+
 }
 
-
+#togglePassword{
+    cursor: pointer;
+}
 

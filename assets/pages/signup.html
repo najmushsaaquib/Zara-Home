@@ -10,8 +10,14 @@
     <!-- style -->
     <link rel="stylesheet" href="/assets/styles/signup.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="/assets/styles/preloader.css">
 </head>
 <body>
+
+    <!-- preLoader -->
+    <div id="preloader"></div>
+
+
     <!-- sign in part -->
 <div id="modalbox" class="modal">
 
@@ -27,7 +33,7 @@
             <h4>REGISTERED CUSTOMERS</h4>
             <p class="regp">We will ask you for the necessary information to speed up the purchase process.
             </p>
-            <P class="regp"> Can’t find your order? You might have purchased as a guest. Click<span><a id="here" href=""> here</a></span> and we’ll tell you how to find it.</P>
+            <P class="regp"> Can’t find your order? You might have purchased as a guest. Click<span><a id="here" href="/assets/pages/zarahome.html"> here</a></span> and we’ll tell you how to find it.</P>
             <input type="email" placeholder="E-mail" required class="inputcell reqlength" id="inputemail"/>
             <!-- <div id="box"> -->
             
@@ -175,3 +181,9 @@
 </body>
 </html>
 <script src="/assets/scripts/signup.js"></script>
+<script>
+    var loader = document.getElementById("preloader")
+    window.addEventListener("load", function(){
+        loader.style.display = "none"
+    })
+</script>
