@@ -214,6 +214,9 @@ function mainHtml() {
 }
 // ! Function for getting  Data for HTML
 
+// localStorage.clear()
+
+
 export {
   mainHtml,
   getData,

@@ -100,11 +100,17 @@ function display(data) {
   let button = document.getElementById("addToBasket");
 
   button.addEventListener("click", () => {
+    data.count = 1;
     cartArray.push(data);
     localStorage.setItem("cart", JSON.stringify(cartArray));
     console.log("Hello");
+    let basket = document.getElementById("basketCount")
+    let count = JSON.parse(localStorage.getItem("cart")).length
+    basket.innerHTML = `(${count})`
+    // alert("Item added to basket")
     
   });
 }
+
 display(data);
 // description and all other information ends here

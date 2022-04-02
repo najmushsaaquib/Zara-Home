@@ -120,6 +120,35 @@ searchclick.addEventListener("click", searchClick)
 function searchClick (){
     window.location.href = "/assets/pages/search.html"
 }
+
+
+let basket = document.getElementById("basketCount")
+    let count = JSON.parse(localStorage.getItem("cart")).length
+        basket.innerHTML = `(${count})`
+
+        
+        let addtocart = document.getElementById("addtocart")
+addtocart.addEventListener("click", cart)
+function cart(){
+    window.location.href="/assets/pages/cart.html"
+}
+
     </script>
     
 <script src="/assets/scripts/catsidebar2.js" type="module"></script>
+
+<script type="module">
+    let mLogin = document.getElementById("modallogin");
+    mLogin.addEventListener("click", modalL)
+    function modalL(){
+        window.location.href = "/assets/pages/signup.html"
+    }
+    
+    let user = JSON.parse(localStorage.getItem("loggedUsername"))||"LOG IN"
+    document.getElementById("modallogin").innerHTML = user;
+    
+    document.getElementById("modallgOut").addEventListener("click", function(){
+        localStorage.removeItem("loggedUsername")
+        window.location.reload();
+    })
+    </script>

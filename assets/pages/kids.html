@@ -7,20 +7,26 @@
     <link rel="shortcut icon" href="/../favicon.png" type="image/x-icon" />
     <link rel="icon" href="/../favicon.png" type="image/x-icon" />
     <link rel="stylesheet" href="../styles/mainProduct.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-    />
-    <link
-      rel="stylesheet"
-      href="https://site-assets.fontawesome.com/releases/v6.0.0/css/all.css"
-    />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="/assets/styles/categorysidebar.css">
+    <link rel="stylesheet" href="/assets/styles/navbar2.css">
     <link rel="stylesheet" href="/assets/styles/footer.css">
-    <title>Kids</title>
+    <link rel="stylesheet" href="/assets/styles/preloader.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.0.0/css/all.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Flat Sheets</title>
   </head>
   <body>
-    <div id="headerDiv"></div>
+
+
+        <!-- Preloader Div -->
+
+        <div id="preloader"></div>
+
+        <!-- Preloader Div -->
+
+
+        <div id="navbar"></div>
 
     <!-- !The container in which the data is being appended starts here -->
     <div id="mainProductContainer"></div>
@@ -32,6 +38,8 @@
     <div id="foot"></div>
 
     <!-- !Side bar filter end here -->
+    <div id="sidebarDiv"></div>
+
   </body>
 </html>
 
@@ -50,11 +58,6 @@
     showOneGrid,
   } from "/../components/productdata.js";
 
-  import footer from "/components/footer.js"
-  document.querySelector("#foot").innerHTML = footer();
-
-
-  // ! Appending main Data
   var data = await getData(
     `https://mocki.io/v1/f3702a8f-06cf-47fa-9a28-500b10854b4c`
   );
@@ -79,3 +82,69 @@
     window.location.href = "/../assets/pages/basket.html";
   }
 </script>
+
+
+<!-- preloader script -->
+<script>
+  var loader = document.getElementById("preloader")
+  window.addEventListener("load", function(){
+      loader.style.display = "none"
+  })
+
+  
+</script>
+<!-- preloader script -->
+
+<!-- ! Header & Footer Stuff -->
+<script type="module" >
+
+  import navbar2 from "/components/header2.js"
+  import sidebar2 from "/components/catsidebar2.js"
+  import footer from "/components/footer.js"
+
+  document.querySelector("#navbar").innerHTML = navbar2()
+  document.querySelector("#sidebarDiv").innerHTML = sidebar2()
+  document.querySelector("#foot").innerHTML = footer()
+  
+  // ! search functionality
+  let searchclick = document.getElementById("searchBox");
+  searchclick.addEventListener("click", searchClick)
+  function searchClick (){
+      window.location.href = "/assets/pages/search.html"
+  }
+      // search functionality
+
+  let addtocart = document.getElementById("addtocart")
+  addtocart.addEventListener("click", cart)
+  function cart(){
+      window.location.href="/assets/pages/cart.html"
+  }
+
+  let basket = document.getElementById("basketCount")
+    let count = JSON.parse(localStorage.getItem("cart")).length
+        basket.innerHTML = `(${count})`
+
+</script>
+
+<!-- ! Sidebar Function script -->
+
+<script src="/assets/scripts/catsidebar2.js" type="module"></script>
+
+<!-- ! Sidebar Function script -->
+
+<!-- Header & Footer Stuff -->
+<script type="module">
+  let mLogin = document.getElementById("modallogin");
+  mLogin.addEventListener("click", modalL)
+  function modalL(){
+      window.location.href = "/assets/pages/signup.html"
+  }
+  
+  let user = JSON.parse(localStorage.getItem("loggedUsername"))||"LOG IN"
+  document.getElementById("modallogin").innerHTML = user;
+  
+  document.getElementById("modallgOut").addEventListener("click", function(){
+      localStorage.removeItem("loggedUsername")
+      window.location.reload();
+  })
+  </script>

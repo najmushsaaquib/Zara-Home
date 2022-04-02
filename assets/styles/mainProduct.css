@@ -200,7 +200,7 @@
   font-weight: bolder;
   border-left: none;
   border-top: none;
-  border-left: none;
+  border-right: none;
 }
 
 #FilterPrice {
@@ -210,6 +210,7 @@
   padding: 20px;
   border-left: none;
   border-top: none;
+  border-right: none;
   justify-content: center;
 }
 .sidePrice {
@@ -226,6 +227,7 @@
   justify-content: space-between;
   border-top: none;
   border-left: none;
+  border-right: none;
 }
 
 .lable-css {
@@ -274,6 +276,13 @@ input[type="radio"] {
   border: 1px solid black;
   cursor: pointer;
 }
+
+#box{
+  width: 95%;
+  border-bottom: 0.3px dashed rgb(177, 177, 177);
+  margin: 0 auto;
+}
+
 #close :hover {
   background-color: #1e1e1e;
   transition: 0.7s;

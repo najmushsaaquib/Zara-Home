@@ -96,12 +96,34 @@
     function backHome(){
         window.location.href = "/assets/pages/zarahome.html"
     }
-    // let art = document.getElementById("homepageimg");
-    // art.addEventListener("click", artofliving)
-    // function artofliving(){
-    //     window.location.href = "/assets/pages/the-art-of-living.html"
-    // }
+   
+
+
+
     
     </script>
     <script src="/assets/scripts/zarahome.js" type="module"></script>
     <script src="/assets/scripts/infoPage.js" type="module"></script>
+    <script type="module">
+        let mLogin = document.getElementById("modallogin");
+        mLogin.addEventListener("click", modalL)
+        function modalL(){
+            window.location.href = "/assets/pages/signup.html"
+        }
+        
+        let user = JSON.parse(localStorage.getItem("loggedUsername"))||"LOG IN"
+        document.getElementById("modallogin").innerHTML = user;
+        
+        document.getElementById("modallgOut").addEventListener("click", function(){
+            localStorage.removeItem("loggedUsername")
+            window.location.reload();
+        })
+
+
+      
+
+
+        </script>
+
+
+        

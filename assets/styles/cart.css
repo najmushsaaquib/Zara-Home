@@ -24,10 +24,11 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
 
 #baasket {
     height: 10vh;
-    width: 95%;
+    width: 96%;
     margin: auto;
     display: flex;
     justify-content: space-between;
+    margin-top:120px;
     
 }
 
@@ -69,36 +70,199 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
     width: 95%;
     margin: auto;
     /* border: 1px solid tomato; */
-    overflow: auto;
-    display: grid;
-    /* justify-content: space-between; */
-    text-align: center;
-    align-items: center
+    display: flex;
+    justify-content: space-between;
+    position: relative;
 }
 
-.fa-bag-shopping{
+#shoppingBagIcon{
     font-size: 265px;
-    margin-bottom: 30px
+    margin-bottom: 30px;
 }
 
 #bag p{
     font-size: 18px;
+    fontWeight: bold;
 }
 
 #left-cont{
-    width: 70%;
-    height: 100%;
-    background-color:teal;
+    width: 75%;
+    /* height: 100; */
+    /* background-color:rgb(126, 126, 126); */
+    overflow: auto;
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(3, 32%);
+    gap: 2%;
+    margin-top: 35px;
+
 }
+
 
 #right-cont{
-    width: 26%;
+    width: 23%;
     height: 100%;
-    background-color:blue;
+    /* background-color:rgb(194, 194, 194); */
+    position: absolute;
+    right: 0;
+    margin-top: 35px;
+    /* border: 1px solid tomato; */
+
+}
     
+
+#image{
+    cursor: pointer;
+}
+
+/* ! Main container box styles ends here */
+
+/* ! Right side div style starts here  */
+#pay{
+    height: 70%;
+    margin-top: 50px;
+
+}
+#Item{
+    height: 45px;
+    width: 100%;
+    /* border: 1px solid tomato; */
+    border-bottom: 1px solid #a5a5a5;
+    margin-bottom: 5px;
+}
+
+#itemsText{
+    padding: 8px 0px;
+}
+
+#total-including-tax{
+    height: 60px;
+    width: 100%;
+    /* border: 1px solid tomato; */
+    display: flex;
+    justify-content: space-between;
+    padding-top: 9px;
+
+}
+
+#grand-total{
+    height: 80px;
+    width: 100%;
+    /* border: 1px solid tomato; */
+    display: flex;
+    justify-content: space-between;
+    padding-top: 9px;
+
+}
+.totaltwice{
+    font-weight: bold;
+}
+
+#promotionText{
+    height: 50px;
+    width: 100%;
+    /* border: 1px solid tomato; */
+    padding-top: 9px;
+    font-size: 13px;
+    color: #474747;
+    margin-bottom: 8px;
+
+}
+
+#processbtn{
+
+    cursor: pointer;
+    width: 100%;
+    height: 40px;
+    background-color: black;
+    color: white;
+}
+
+#processbtn:hover{
+    cursor: pointer;
+    background-color: rgb(44, 44, 44);
 }
 
 
-/* ! Main container box styles ends here */
+/* ! Right side div style ends here  */
+
+
+/* ! Left side div style starts here  */
+#singleItemContainer{
+    height: 530px;
+    /* border: 2px solid tomato; */
+    position: relative;
+    z-index: -1;
+}
+#singleItemImageContainer{
+    height: 70%;
+    width: 100%;
+}
+
+#remove{
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    z-index:1;
+    margin-top:15px;
+    margin-right: -5px;
+}
+
+
+.fa-times {
+    cursor: pointer;
+    font-size: 25px;
+}
+
+#minus, #plus{
+    text-align: center;
+}
+.circle{
+    background-color: black;
+    color: white;
+    border-radius:50%;
+    height: 25px;
+    width: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#singleItemImageContainer > img{
+   width: 100%;
+   height: 100%;
+}
+
+#singleItemPriceAndQuantityContainer{
+    display: flex;
+    justify-content: space-between;
+    height: 10%;
+    margin-top: 6px ;
+    margin-bottom: 6px ;
+}
+
+#singleItemTitleContainer {
+    height: 10%;
+    font-size: 15px;
+    padding: 5px 0px;
+    font-weight: 500;
+
+}
+#title{
+    margin-top: 6px ;
+    margin-bottom: 6px ;
+}
+#singleItemQuantity{
+    display: flex;
+    /* height: 10%; */
+
+}
+#singleItemRefContainer{
+    color: #1E1E1E;
+    position: absolute;
+    bottom: 1%;
+    font-size: 11px;
+    height: 10%;
+    margin-top: 6px ;
+
+}
+/* ! Left side div style starts here  */

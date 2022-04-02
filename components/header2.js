@@ -7,11 +7,11 @@ const navbar2 = () =>{
 <div id="login_basketDiv">
     <div id="loginicon">
         <div><img src="/assets/images/login icon.png" alt="login"></div>
-        <div><p>LOG IN</p></div>
+        <div><p id = "modallogin">LOG IN</p></div>
     </div>
     <div id="basketicon">
         <div><img src="/assets/images/basket icon 2.png" alt="basket"></div>
-        <div><p>BASKET<span id="basketCount"><span>(1)</span></span></p></div>
+        <div><p id="addtocart" >BASKET<span id="basketCount"><span>(1)</span></span></p></div>
     </div>
 </div>
 </div>`
