@@ -100,6 +100,12 @@ const sidebar = () =>{
             </div>
         </div>
 
+        
+        <div>
+            <a href="#"><p id="modallgOut">Logout</p></a>
+            
+        </div>
+
     </div>
 </div>`
 }

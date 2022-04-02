@@ -54,7 +54,6 @@
             
         </div>
 
-
         <!-- preloader JS -->
 
         <script>
@@ -92,6 +91,18 @@ let clickLogo = document.getElementById("logoImg");
 clickLogo.addEventListener("click", backHome)
 function backHome(){
     window.location.href = "/assets/pages/zarahome.html"
+}
+
+let mLogin = document.getElementById("modallogin");
+mLogin.addEventListener("click", modalL)
+function modalL(){
+    window.location.href = "/assets/pages/signup.html"
+}
+
+let addtocart = document.getElementById("addtocart")
+addtocart.addEventListener("click", cart)
+function cart(){
+    window.location.href="/assets/pages/addtocart.html"
 }
 
 </script>

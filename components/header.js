@@ -8,11 +8,11 @@ const header = () =>{
     <div id="login_basketDiv">
         <div id="loginicon">
             <div><img src="https://bit.ly/3tMdlRC" alt="login"></div>
-            <div><p>LOG IN</p></div>
+            <div><p  id = "modallogin">LOG IN</p></div>
         </div>
         <div id="basketicon">
             <div><img src="/assets/images/basket icon.png" alt="basket"></div>
-            <div><p>BASKET<span id="basketCount"><span>(1)</span></span></p></div>
+            <div><p id = "addtocart">BASKET</p></div>
         </div>
     </div>
 </div>
