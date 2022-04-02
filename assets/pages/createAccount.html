@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Sign Up - Zara home</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="https://www.zarahome.com/static/itxwebstandard/22.0.1/images/favicon.png?t=2022032418102457db77364736" type="image/x-icon">
+    <!-- style -->
+    <link rel="stylesheet" href="/assets/styles/createAcc.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="/assets/styles/preloader.css">
+</head>
+<body>
+    
+    <!-- preLoader -->
+    <div id="preloader"></div>
+
+    <!-- signup part -->
+    
+    
+    
+    <div id="modalbox1" class="modal1">
+    
+    
+        <div class="modalcontent1">
+            <span id="closingbtn1" class="close1">&times;</span>
+           <p class="create">CREATE YOUR ZARA HOME ACCOUNT </p>
+             <div class="radiobox">
+                 <input type="radio"class="radio" name="gp1" value="ind"/>
+                 <lable for="individual" class="ver">Individual</lable>
+        
+                 <input type="radio" class="radio" name="gp1" value="com"/>
+                 <lable for="company" class="ver">Company</lable>
+             </div>
+        
+              <div class="cenform">
+               <form action="#">
+
+        
+                <input type="text" placeholder="Name *" class="counwidth inputcell" id="signname" required />
+                 <input type="email" placeholder="E-mail *" class="counwidth inputcell" id="signemail" required/>
+                 <div id="box">
+                
+                 <label for="password"></label>
+                 <input type="password" placeholder="Password *" class="counwidth inputcell" id="signpassword" required/>
+                <i class="bi bi-eye-slash" id="togglePassword2"></i>
+                </div>
+                 <div  class="checkmargin" >
+                    <input type="checkbox"  class="checkb"/>
+                    <lable for="checkbox"class="ver1">I have read and accept the privacy policy</lable><br>
+            
+                    <input type="checkbox" class="checkb"/>
+                    <lable for="checkbox" id="veriable1" class="ver1">I would like to receive news, notifications and offers from Zara Home</span>.</lable>
+        
+                    <button id="createaccount" class="csignupbtn">CREATE ACCOUNT</button>
+                </div>
+               </form>
+        
+         
+              </div>
+              
+        
+              
+        </div>
+        
+        
+        
+        </div>
+    
+</body>
+</html>
+<script>
+    var loader = document.getElementById("preloader")
+    window.addEventListener("load", function(){
+        loader.style.display = "none"
+    })
+</script>
+<script src="/assets/scripts/createAcc.js"></script>

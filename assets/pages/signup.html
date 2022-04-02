@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In | Zara home</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="https://www.zarahome.com/static/itxwebstandard/22.0.1/images/favicon.png?t=2022032418102457db77364736" type="image/x-icon">
+    <!-- style -->
+    <link rel="stylesheet" href="/assets/styles/signup.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="/assets/styles/preloader.css">
+</head>
+<body>
+
+    <!-- preLoader -->
+    <div id="preloader"></div>
+
+
+    <!-- sign in part -->
+<div id="modalbox" class="modal">
+
+
+    <div class="modalcontent">
+        
+    
+    
+       
+        <div id="cdiv1" class="rcust flex">
+        <form>
+    
+            <h4>REGISTERED CUSTOMERS</h4>
+            <p class="regp">We will ask you for the necessary information to speed up the purchase process.
+            </p>
+            <P class="regp"> Can’t find your order? You might have purchased as a guest. Click<span><a id="here" href="/assets/pages/zarahome.html"> here</a></span> and we’ll tell you how to find it.</P>
+            <input type="email" placeholder="E-mail *" required class="inputcell reqlength" id="inputemail"/>
+            <!-- <div id="box"> -->
+            
+            <label for="password"></label>
+            <input type="password" placeholder="Password *" required class="inputcell reqlength" id="inputpass"/>
+            <i class="bi bi-eye-slash" id="togglePassword"></i>
+            
+            <button id="loginbtn" class="buttn">LOG IN</button>
+         
+    
+        </form>
+    
+        </div>
+    
+    
+        <div id="cdiv2" class="ncust flex">
+          
+            <h4>NEW CUSTOMER  <span id="closingbtna" class="close">&times;</span></h4>
+            <button id="newaccountbtn" class="buttn">CREATE A NEW ACCOUNT</button>
+        </div>
+    
+    
+    
+    </div>
+    
+    
+    
+    </div>
+    
+    
+</body>
+</html>
+<script src="/assets/scripts/signup.js" type="module"></script>
+<script>
+    var loader = document.getElementById("preloader")
+    window.addEventListener("load", function(){
+        loader.style.display = "none"
+    })
+</script>
