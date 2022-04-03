@@ -321,6 +321,7 @@ margin-top: 10px;
    width: 18%;
    /* border:1px solid red; */
    margin-right: 70%;
+   cursor: pointer;
    
 }
 #header_div>p{
@@ -336,3 +337,16 @@ margin-top: 10px;
    border: none;
    /* border-bottom: 1px solid ; */
 }
+
+::-webkit-scrollbar {
+   width: 8px;
+ }
+ 
+ ::-webkit-scrollbar-track {
+   background: white;
+ }
+ 
+ ::-webkit-scrollbar-thumb {
+   background: white;
+   border-radius: 10px;
+ }

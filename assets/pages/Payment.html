@@ -4,11 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Checkout | Zara Home Worldwide</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="https://www.zarahome.com/static/itxwebstandard/22.0.1/images/favicon.png?t=2022032418102457db77364736" type="image/x-icon">
     <link rel="stylesheet" href="/assets/styles/footer.css">
     <link rel="stylesheet" href="/assets/styles/payment.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link  rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.0.0/css/all.css"/>
+    <link rel="stylesheet" href="/assets/styles/cardImg.css">
 </head>
 <body>
     <div id="payment-main">
@@ -74,6 +77,10 @@
                     <!-- here the right side of the div(right-card) comes the details that we have entered -->
                     <div id="right-card">
                         <div id="payment-card">
+
+                            <div id="chip">
+                                <img src="https://github.com/nag-murali/Clone-ZaraHome/blob/main/check_pay_summary/images/chip.png?raw=true" alt="chip">
+                            </div>
                             <div id="upper_card">
 
                                 <h3 id="card_number"></h3>
@@ -171,4 +178,10 @@ document.getElementById("footerM").innerHTML= footer()
 
 <script src="/assets/scripts/payment.js">
 
+</script>
+<script>
+    let zarahome = document.getElementById("logo")
+    zarahome.addEventListener("click", function(){
+        window.location.href = "/assets/pages/zarahome.html"
+    })
 </script>

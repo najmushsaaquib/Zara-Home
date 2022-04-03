@@ -91,10 +91,12 @@ priceTotal()
         let entered_month = document.getElementById("month").value
         let entered_year = document.getElementById("year").value
         let entered_cvv = document.getElementById("cvv").value
+       
 
         //  console.log(entered_number)
         let card_number = document.getElementById("card_number")
         card_number.textContent=`${entered_number}`
+        
         
         let cardName = document.getElementById("card_name")
         cardName.innerText = `${entered_name}`
@@ -112,6 +114,7 @@ priceTotal()
             card_month:entered_month,
             card_year:entered_year,
             enteredCvv:entered_cvv
+
         }
 
         console.log(obj)

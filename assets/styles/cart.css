@@ -95,6 +95,7 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
     gap: 2%;
     margin-top: 35px;
 
+
 }
 
 
@@ -191,7 +192,6 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
     height: 530px;
     /* border: 2px solid tomato; */
     position: relative;
-    z-index: -1;
 }
 #singleItemImageContainer{
     height: 70%;
@@ -206,6 +206,7 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
     z-index:1;
     margin-top:15px;
     margin-right: -5px;
+    cursor: pointer;
 }
 
 
@@ -216,6 +217,7 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
 
 #minus, #plus{
     text-align: center;
+    cursor: pointer;
 }
 .circle{
     background-color: black;
@@ -245,6 +247,9 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
     font-size: 15px;
     padding: 5px 0px;
     font-weight: 500;
+    cursor: pointer;
+
+
 
 }
 #title{
@@ -266,3 +271,16 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
 
 }
 /* ! Left side div style starts here  */
+
+::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: white;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: white;
+    border-radius: 10px;
+  }

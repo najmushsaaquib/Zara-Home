@@ -21,6 +21,7 @@
    width: 18%;
    /* border:1px solid red; */
    margin-right: 72%;
+   cursor: pointer;
    
 }
 #header_div>p{
@@ -196,9 +197,7 @@ button{
    cursor:pointer;
    margin: auto;
 }
-#btn{
-   height: 40px;
-}
+
 
 /* delivery details styling */
 
@@ -215,3 +214,16 @@ button{
     border: 1px solid red;
     margin-left: 75px;
 } */
+
+::-webkit-scrollbar {
+   width: 8px;
+ }
+ 
+ ::-webkit-scrollbar-track {
+   background: white;
+ }
+ 
+ ::-webkit-scrollbar-thumb {
+   background: white;
+   border-radius: 10px;
+ }

@@ -1,7 +1,7 @@
-let cartArray =  JSON.parse(localStorage.getItem("cart")) || [];
+let cartArray = JSON.parse(localStorage.getItem("cart")) || [];
 let dataArr = JSON.parse(localStorage.getItem("productDetail"));
-let data = dataArr[0]
-console.log(dataArr)
+let data = dataArr[0];
+console.log(dataArr);
 // append Images starts here
 let imageDiv = document.getElementById("basketImages");
 appendData(data);
@@ -99,16 +99,33 @@ function display(data) {
 
   let button = document.getElementById("addToBasket");
 
+  function check(cartArr, el) {
+    for (let i = 0; i < cartArr.length; i++) {
+      if (el.name == cartArr[i].name) {
+        return true;
+      }
+    }
+    return false;
+  }
+
+  console.log(data);
+
+  data.count = 1;
   button.addEventListener("click", () => {
-    data.count = 1;
-    cartArray.push(data);
-    localStorage.setItem("cart", JSON.stringify(cartArray));
-    console.log("Hello");
-    let basket = document.getElementById("basketCount")
-    let count = JSON.parse(localStorage.getItem("cart")).length
-    basket.innerHTML = `(${count})`
+    if (check(cartArray, data)) {
+      console.log(data);
+      data.count++;
+      console.log("IF chala?")
+      localStorage.setItem("cart", JSON.stringify(cartArray));
+    } else {
+      cartArray.push(data);
+      console.log("else bhi chal gaya?")
+      localStorage.setItem("cart", JSON.stringify(cartArray));
+      let basket = document.getElementById("basketCount");
+      let count = JSON.parse(localStorage.getItem("cart")).length;
+      basket.innerHTML = `(${count})`;
+    }
     // alert("Item added to basket")
-    
   });
 }
 

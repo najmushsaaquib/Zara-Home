@@ -4,12 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Summary</title>
+    <title>Checkout | Zara Home Worldwide</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="https://www.zarahome.com/static/itxwebstandard/22.0.1/images/favicon.png?t=2022032418102457db77364736" type="image/x-icon">
     <link rel="stylesheet" href="/assets/styles/summary.css">
     <!-- <link rel="stylesheet" href="payment.css"> -->
     <link rel="stylesheet" href="/assets/styles/footer.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link  rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.0.0/css/all.css"/>
+    <link rel="stylesheet" href="/assets/styles/cardImg.css">
+    <style>
+        #card_name{
+            height: fit-content;
+        }
+        #lower_card{
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
     <div id="full">
@@ -49,31 +60,11 @@
                 <h3>PAYMENT DETAILS</h3>
             </div>
 
-            <!-- here the right side of the div(right-card) comes the details that we have entered -->
-                <!-- <div id="payment-card">
-                    <div id="upper_card">
-
-                        <h3 id="card_number"></h3>
-
-                
-                    </div>
-                    <div id="lower_card">
-
-                        <h4 id="card_name"> </h4>
-
-                        <div id="card-dates">
-                            <h5 id="card_month">
-
-                            </h5>
-                            <h5 id="card_year"> 
-
-                            </h5>
-                        </div>
-                        
-                    </div>
-                </div> -->
 
                 <div id="payment-card">
+                    <div id="chip">
+                        <img src="https://github.com/nag-murali/Clone-ZaraHome/blob/main/check_pay_summary/images/chip.png?raw=true" alt="chip">
+                    </div>
                     <div id="upper_card">
 
                         <h3 id="card_number"></h3>
@@ -183,3 +174,9 @@ import footer from "/components/footer.js"
 </script>
 
 <script src="/assets/scripts/summary.js"></script>
+<script>
+    let zarahome = document.getElementById("logo")
+    zarahome.addEventListener("click", function(){
+        window.location.href = "/assets/pages/zarahome.html"
+    })
+</script>

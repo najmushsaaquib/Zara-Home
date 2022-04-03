@@ -62,6 +62,11 @@
    display: grid;   
    margin-left: 10px;
 }
+
+#image-pay > div > img{
+   cursor: pointer;
+
+}
 /* #nav-div>h3{
     margin:auto;
 } */
@@ -249,7 +254,7 @@
  }
  #upper{
     height: 120px;
-    width: 94%;
+    width: 95%;
     border: none;
     justify-content:space-evenly;
     position: fixed;
@@ -257,7 +262,7 @@
     background-color: white;
     margin: auto;
     margin-left: 25px;
-    /* margin-top: 80px; */
+  
     z-index: 1000;
  }
  #upper>h3{
@@ -275,6 +280,7 @@
     width: 18%;
     /* border:1px solid red; */
     margin-right: 72%;
+    cursor: pointer;
     
  }
  #header_div>p{
@@ -290,3 +296,17 @@
     border: none;
     /* border-bottom: 1px solid ; */
  }
+
+ 
+ ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: white;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: white;
+    border-radius: 10px;
+  }

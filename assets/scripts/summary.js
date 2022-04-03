@@ -48,7 +48,7 @@
     // console.log(newData)
     
     let billingName = document.createElement("h3")
-    billingName.innerText= newData.surname +" " + newData.name
+    billingName.innerText= newData.name +" " + newData.surname
     
     let billingAddress = document.createElement("p")
     billingAddress.innerText= newData.address + "   " +newData.floor
@@ -70,7 +70,7 @@
         // console.log(newData)
         
         let billingName = document.createElement("h3")
-        billingName.innerText=newData.surname +" " + newData.name
+        billingName.innerText=newData.name +" " + newData.surname
         
     let billingAddress = document.createElement("p")
     billingAddress.innerText= newData.address + "   " +newData.floor
