@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zara Home | Official Site</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="https://www.zarahome.com/static/itxwebstandard/22.0.1/images/favicon.png?t=2022032418102457db77364736" type="image/x-icon">
+    
+    <!-- style -->
+    <link rel="stylesheet" href="/assets/styles/zarahome.css">
+    <link rel="stylesheet" href="/assets/styles/categorysidebar.css">
+    <link rel="stylesheet" href="/assets/styles/navbar.css">
+    <link rel="stylesheet" href="/assets/styles/footer.css">
+    <link rel="stylesheet" href="/assets/styles/preloader.css">
+
+    <!-- Google Material icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <!-- fontAwsome -->
+    <script src="https://kit.fontawesome.com/b832c13233.js" crossorigin="anonymous"></script>
+
+
+</head>
+<body>
+    <!-- preLoader -->
+    <div id="preloader"></div>
+
+    <!-- mainContainer -->
+
+    <div id="container">
+        <img id="homepageimg" src="https://static.zarahome.net/8/static4/itxwebstandard/dto_imagen/home/slider/desktop/SS22.jpg?20220329020527&imwidth=1250&impolicy=zarahome-itxmedium" alt="">
+        <div id="center"><img src="/assets/images/the art of living.png" alt=""></div>
+
+        <!-- Navbar -->
+
+        <div id="header">
+
+        </div>
+
+    <!-- empty_box -->
+
+    <div id="box"></div>
+
+    <!-- footer -->
+    <div id="footerDiv">
+      
+    </div>
+
+    <!-- Important -->
+
+        <div id="sidebarmaindiv">
+            
+        </div>
+
+        <!-- preloader JS -->
+
+        <script>
+            var loader = document.getElementById("preloader")
+            window.addEventListener("load", function(){
+                loader.style.display = "none"
+            })
+        </script>
+
+</body>
+</html>
+<script type="module">
+    
+import header from "/components/header.js"
+import footer from "/components/footer.js"
+import sidebar from "/components/categoriesSidebar.js"
+
+
+let nav = document.getElementById("header")
+nav.innerHTML = header()
+
+let foot = document.getElementById("footerDiv")
+foot.innerHTML = footer()
+
+let side_bar = document.getElementById("sidebarmaindiv")
+    side_bar.innerHTML = sidebar()
+
+let searchclick = document.getElementById("searchBox");
+searchclick.addEventListener("click", searchClick)
+function searchClick (){
+    window.location.href = "/assets/pages/search.html"
+}
+
+let clickLogo = document.getElementById("logoImg");
+clickLogo.addEventListener("click", backHome)
+function backHome(){
+    window.location.href = "/assets/pages/zarahome.html"
+}
+
+let addtocart = document.getElementById("addtocart")
+addtocart.addEventListener("click", cart)
+function cart(){
+    window.location.href="/assets/pages/cart.html"
+}
+
+</script>
+
+
+<script src="/assets/scripts/zarahome.js" type="module"></script>
+
+
+
+<script type="module">
+let mLogin = document.getElementById("modallogin");
+mLogin.addEventListener("click", modalL)
+function modalL(){
+    window.location.href = "/assets/pages/signup.html"
+}
+
+let user = JSON.parse(localStorage.getItem("loggedUsername"))||"LOG IN"
+document.getElementById("modallogin").innerHTML = user;
+
+document.getElementById("modallgOut").addEventListener("click", function(){
+    localStorage.removeItem("loggedUsername")
+    window.location.reload();
+})
+</script>

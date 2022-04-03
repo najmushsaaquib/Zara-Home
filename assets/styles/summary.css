@@ -1,0 +1,352 @@
+*{
+    font-family: Roboto,Helvetica Neue,sans-serif;
+ }
+ #full{
+    height: 750px;
+    width: 100%;
+    /* border: 1px solid teal; */
+    margin: auto;
+    display: grid;
+ }
+ #nav-div{
+    height: 60px;
+    width: 95%;
+    border: none;
+    border-bottom: 1px solid;
+    display: flex;
+    justify-content:space-evenly;
+    /* position: fixed;
+    top: 0;
+    background-color: white; */
+    margin: auto;
+    margin-left: 33px;
+ }
+ #nav-div>h3{
+    cursor: pointer;
+ }
+ #lower{
+    height: 680px;
+    width: 95%;
+    margin: auto;
+    /* border: 1px solid black;  */
+    display: flex;
+    margin-top: 8%;
+ }
+ #standard{
+    height: 35px;
+    width: 95%;
+    border: 1px solid;
+    border: none;
+    border-bottom: 1px solid;
+    /* margin: auto; */
+    /* margin-right: 50px; */
+    /* margin-top: 30px; */
+ }
+ #details-div{
+    height: 670px;
+    width: 73%;
+    /* border: 1px solid blue; */
+    margin: auto;
+    margin-top: 30px;
+    gap: 10px;
+ }
+ #details{
+   height: 40px;
+   width: 95%;
+   margin-bottom: 20px;
+   border: none;
+   border-bottom: 1px solid;
+   margin-left: 10px;
+}
+#payment-card{
+   width: 350px;
+   height: 190px;
+   margin-top: 15px;
+   background-color:  lightgray;
+   display: grid;
+   border-radius: 10px;
+   box-sizing: border-box;
+   font-family: Roboto,Helvetica Neue,sans-serif;
+  
+}
+#upper_card{
+   height: 50px;
+   width: 80%;
+   margin: auto;
+   margin-top: 70px;
+   /* border: 1px solid; */
+}
+#upper_card>h3{
+   color: white;
+   font-weight: 400;
+}
+#lower_card{
+   height: 40px;
+   width: 90%;
+   /* margin: auto; */
+   margin-left: 10px;
+   margin-bottom: 20px;
+   margin-right: 30px;
+   /* border: 1px solid; */
+   /* justify-content: space-evenly; */
+   display: flex;
+   /* background-color:blue */
+}
+#lower_card>h4{
+   color: black;
+   text-transform: uppercase;
+/* border: 1px solid teal; */
+margin-top: 10px;
+   margin-left: 30px;
+   margin-right: 30%;
+}
+#lower_card>div{
+   height: 39px;
+   width: 15%;
+   display: flex;
+   /* margin: auto; */
+   margin-right: 10px;
+   font-size: medium;
+   /* border: 1px solid red; */
+}
+#card-dates{
+   height: 40px;
+   display: flex;
+   width: 500px;
+   /* border: 1px solid red; */
+   /* background-color:red; */
+   
+}
+#card_year,#card_month{
+   color: white;
+   margin: auto;
+}
+
+#items-div{
+   height: 40px;
+   width: 95%;
+   margin-bottom: 20px;
+   border: none;
+   border-bottom: 1px solid;
+   margin-left: 10px;
+}
+.cartitems{
+   height: 150px;
+   width: 40%;
+   
+   margin-top: 10px;
+   display: flex;
+   
+}
+/* cart div styling comes here */
+
+ #cart-div{
+    height: 300px;
+    width: 23%;
+    /* border: 1px solid gray; */
+    margin-top: 10px;
+    position: sticky;
+    display: grid;
+    top: 5rem;
+    right: 2rem;
+ }
+ #cart_count{
+    height: 50px;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid; 
+    display: flex;
+ }
+
+ #total_items{
+    height: 40px;
+    width: 98%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    /* border: 1px solid; */
+ }
+ #item_delivery{
+   height: 30px;
+   width: 98%;
+   display: flex;
+   justify-content: space-between;
+   /* border: 1px solid; */
+}
+ #cart_total{
+    height: 40px;
+    width: 98%;
+    display: flex;
+    justify-content: space-between;
+    /* margin-top: auto; */
+   /* border: 1px solid; */
+     
+ }
+
+  
+ #para{
+    height: 20px;
+    width: 99%;
+    margin-bottom: 20px;
+    /* border: 1px solid ; */
+ }
+
+ button{
+    background-color: rgb(52, 50, 50);
+    color: white;
+    /* padding: 5px 140px; */
+    cursor:pointer;
+    margin: auto;
+    font-size: 10px;
+    width: 100%;
+    border: 1px solid;
+    height: 30px;
+ }
+ #firstpayment{
+   height: 250px;
+   width: 70%;
+   /* border: 1px solid teal; */
+   align-items:center;
+   justify-content: space-between;
+   display: flex;
+
+ }
+ #billingData{
+    height: 160px;
+    width: 45%;
+    /* margin: auto; */
+    border: 1px solid lightgrey;
+    padding-left:10px;
+    font-family: ZH-Sans, Arial, "Lucida Sans Unicode", sans-serif ;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    color:rgb(30, 30, 30) ;
+    /* box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
+}
+
+#bill_details{
+   height: 160px;
+   width: 45%;
+   /* margin: auto; */
+   border: 1px solid lightgrey;
+   padding-left:10px;
+   font-family: ZH-Sans, Arial, "Lucida Sans Unicode", sans-serif ;
+   font-size: 16px;
+   font-weight: 400;
+   line-height: 20px;
+   color:rgb(30, 30, 30) ;
+   /* box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
+}
+
+#summary_Image{
+   width: 90px;
+   height: 110px;
+   margin-right: 15px;
+   margin-top: 20px;
+}
+#footerM
+{
+
+   margin-top: 10%;
+
+}
+
+/* modallllll */
+
+.modal {
+   display: none; /* Hidden by default */
+   position: fixed; /* Stay in place */
+   z-index: 1; /* Sit on top */
+   padding-top: 100px; /* Location of the box */
+   left: 0;
+   top: 0;
+   width: 100%; /* Full width */
+   height: 100%; /* Full height */
+   overflow: auto; /* Enable scroll if needed */
+   background-color: rgb(0,0,0); /* Fallback color */
+   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+ }
+ 
+ /* Modal Content */
+ .modal-content {
+   background-color: #fefefe;
+   margin: auto;
+   padding: 20px;
+   border: 1px solid #888;
+   width: 30%;
+   font-size: 20px;
+ }
+ 
+ /* The Close Button */
+ .close {
+   color: #aaaaaa;
+   float: right;
+   font-size: 28px;
+   font-weight: bold;
+ }
+ 
+ .close:hover,
+ .close:focus {
+   color: #000;
+   text-decoration: none;
+   cursor: pointer;
+ }
+
+ #upper{
+   height: 120px;
+   width: 94%;
+   border: none;
+   justify-content:space-evenly;
+   position: fixed;
+   top: 0;
+   background-color: white;
+   margin: auto;
+   margin-left: 25px;
+   /* margin-top: 80px; */
+   z-index: 1000;
+}
+#upper>h3{
+   cursor: pointer;
+}
+#header_div{
+   height: 30px;
+   width: 100%;
+   /* border: 1px solid teal; */
+   margin-top: 10px;
+   display: flex; 
+}
+#logo{
+   height: 23px;
+   width: 18%;
+   /* border:1px solid red; */
+   margin-right: 70%;
+   cursor: pointer;
+   
+}
+#header_div>p{
+   /* border: 1px solid red; */
+   margin-top: 15px;
+   font-size: 17px;
+   font-family: ZH-Sans, Arial, "Lucida Sans Unicode", sans-serif;
+}
+#h3_div{
+   display: flex;
+   justify-content:space-around;
+   margin-top:25px;
+   border: none;
+   /* border-bottom: 1px solid ; */
+}
+
+::-webkit-scrollbar {
+   width: 8px;
+ }
+ 
+ ::-webkit-scrollbar-track {
+   background: white;
+ }
+ 
+ ::-webkit-scrollbar-thumb {
+   background: white;
+   border-radius: 10px;
+ }

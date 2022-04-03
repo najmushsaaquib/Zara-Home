@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | Zara Home Worldwide</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="https://www.zarahome.com/static/itxwebstandard/22.0.1/images/favicon.png?t=2022032418102457db77364736" type="image/x-icon">
+    <link rel="stylesheet" href="/assets/styles/footer.css">
+    <link rel="stylesheet" href="/assets/styles/delivery.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link  rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.0.0/css/all.css"/>
+</head>
+<body>
+    <!-- the Main Div -->
+    <div id="full">
+    
+
+
+ <!-- inside we create two divs  -->
+        <!-- This upper div contain Payment summary and Delivery  -->
+        <div id="upper">
+            <div id="header_div">
+                <img id = "logo"src="https://static.zarahome.net/8/static4/itxwebstandard/images/logos/logo.svg?20220402020507" alt="">
+    <img src="https://github.com/najmushsaaquib/Zara-Home/blob/suranaarpit/assets/images/basket%20icon%202.png?raw=true" style="width: 20px; height: 20px; margin-top:5px" alt="" /><p style="margin-top:6px;">&nbsp; Basket(<span id = "basketLength">0</span>)</p>
+                
+            </div>
+            <div id="h3_div">
+                <h3 id="upper-delivery">1.DELIVERY</h3>
+                <h3 id="upper-payment">2.PAYMENT</h3>
+                <h3 id="upper-summary">3.SUMMARY</h3>
+            </div>
+            <div style="width: 100%; height:0px; border-bottom:1px solid black; margin-top:-10px"></div>
+        </div>
+
+        <!-- this lower div contain details of delivery etc -->
+        <div id="lower">
+            <!-- inside this we create two div one for Details andanother for cart -->
+            <!-- here this div contain details that we add in payment  -->
+            <div id="payment">
+
+                <!-- first standard div  -->
+                <div id="standard">
+                    <h3>STANDARD</h3>
+                    <div id="price">
+                        <p>
+                            <input type="radio" name="" id="">The estimated delivery time will be between 7-10 working days, depending on the delivery address.
+                        <h5 id="price_here">price here</h5>
+                    </div>
+                </div>
+
+
+                <!-- address div  -->
+                <div id="delivery">
+                    <h3>DELIVERY ADDRESS</h3>
+                    <input type="checkbox" name="" id="checkbox" autocomplete="" > Use as billing address <br>
+                    <input type="radio" name="zara" id=""> Individual
+                    <input type="radio" name="zara" id=""> Company
+
+                </div>
+
+
+                <!-- inputtags div  --> 
+                <div id="input-tags">
+                    <!-- here we create two divs for left and right  -->
+                    <!-- left ide input-tags  -->
+                    <div id="left">
+                        <p>Choose The Country</p>
+                        <input type="text" list="test">
+                        <datalist id="test">
+                            <option>United kingdom</option>
+                            <option>INDIA</option>
+                        </datalist>
+                        
+                       <p>Name</p>
+                       <input type="text" name="" id="name">
+                       <p>Addres</p>
+                       <input type="text" name="" id="address">
+                       <p>Floor/Door/etc..</p>
+                       <input type="text" name="" id="floor">
+                       <p>City</p>
+                       <input type="text" name="" id="city">
+                    </div>
+
+                    <!-- right side inputtags  -->
+                    <div id="right">
+                        <p>E-mail</p>
+                        <input type="email" id="email">
+                        <p>Surname(s)</p>
+                        <input type="text" name="" id="surname">
+                        <p>Complete Address</p>
+                        <input type="text" name="" id="completeAddress">
+                        <p>Postcode</p>
+                        <input type="text" name="" id="Postcode">
+                        <p>Telephone</p>
+                        <input type="text" name="" id="mobileNumber">
+                    </div>
+                </div>
+
+            </div>
+            <!-- this is cart div  -->
+        <div id="cart-div" style="margin-top:10px;">
+
+            <div id="cart_count">
+                <h2 id="cart"></h2>
+                <h2>&nbsp;ITEMS</h2>
+            </div>
+
+            <div id="total_items">
+                <!-- <p>Total items: including tax</p> -->
+                <span>
+                    Total items: including tax
+                </span>
+                <span id="price_total">
+                    
+                </span>
+            </div>
+
+            <div id="item_delivery">
+                <span>Delivery charges</span>
+
+                <span id="delivery_charge">#delivery_charge</span>
+            </div>
+
+            <div id="para">
+                <p>
+                    * Import costs not included. To be paid locally.
+                </p>
+            </div>
+            
+            <div id="cart_total">
+                <h4>Total</h4>
+                <h4 id="total">
+                   
+                </h4>
+            </div>
+
+<!-- 
+            <p style="font-weight: 100; font-size: small;">
+                DO YOU HAVE A PROMOTIONAL CODE? Enter it when you reach the payment page
+            </p > -->
+            <button id="btn">CONTINUE</button>
+
+        </div>
+        </div>
+
+  
+  </div>
+  
+
+
+  <!-- <div id="billingData">
+
+    <h3>DELIVERY ADDRESS</h3>
+    <input type="checkbox" name="" id="checkbox"> Send to the billing address
+    <div id="delivery_details">
+        
+    </div>
+    
+</div> -->
+
+
+<!-- <div id="down-div"  style=" visibility: hidden">
+
+    <div id="lower-div" >
+
+        <div id="details">
+            <h3>PAYMENT DETAILS</h3>
+        </div>
+        
+        <div id="image-pay">
+
+        </div>
+
+        <div id="card-details">
+
+            <div id="left-card">
+                <div id="card-inputs">
+                    <h4>PAYMENT CARD DETAILS</h4>
+
+                    <p>Card number</p>
+                    <input class="inputTag" type="tel" minlength="16" maxlength="16" name="" id="entered_number" onkeyup="myfun(this)" required>
+
+                    <p>Name on card</p>
+                    <input class="inputTag" type="text" name="" id="entered_name"  onkeyup="myfun(this)" required>
+
+                    <p>Expiry details</p>
+                </div>
+                <div id="expiry">
+                    <div id="expiry-details">
+                         <p class="expiry">Month</p>
+                         <p class="expiry">Year</p>
+                         <p class="expiry">CVV</p>
+                    </div>
+                    <div id="input-details">
+                        <input class="inputTags" type="number" minlength="1" maxlength="12"    id="month"     onkeyup="myfun(this)" required >
+                        <input class="inputTags" type="number" minlength="2" maxlength="2"     id="year"      onkeyup="myfun(this)"  required >
+                        <input class="inputTags" type="number" minlength="3" maxlength="4"     id="cvv"       onkeyup="myfun(this)" required >
+                    </div>
+                </div>
+                <br>
+                <input className="inputTag" type="checkbox" name="" id="checkbox">Request Invoice <br>
+            </div>
+
+            <div id="right-card">
+                <div id="payment-card">
+                    <div id="upper_card">
+
+                        <h3 id="card_number"></h3>
+
+                    </div>
+                    <div id="lower_card">
+
+                        <h4 id="card_name">
+
+                        </h4>
+                        <div id ="lower_card_div1">
+                            <h5 id="card_month">
+
+                            </h5>
+                            <h5 id="card_year"> 
+
+                            </h5>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+<div id="cart-div">
+
+    <div id="cart_count">
+        <h2 id="cart">1&nbsp;</h2>
+        <h2> &nbsp;ITEMS</h2>
+    </div>
+
+    <div id="total_items">
+        <span>
+            Total items: including tax
+        </span>
+        <span id="price_total">
+            #price_total
+        </span>
+    </div>
+
+    <div id="item_delivery">
+        <span>Delivery charges</span>
+
+        <span id="delivery_charge">#delivery_charge</span>
+    </div>
+
+    <div id="para">
+        <p>
+            * Import costs not included. To be paid locally.
+        </p>
+    </div>
+    
+    <div id="cart_total">
+        <h4>Total</h4>
+        <h4 id="total">
+            #price_total
+        </h4>
+    </div>
+
+
+
+    <button id="btn" onclick="">CONTINUE</button>
+
+</div>
+
+
+
+</div> -->
+
+
+
+
+
+
+
+<div id="footerM" style="margin-top:-70px;">
+    
+</div>
+
+
+</body>
+</html>
+
+<script src="/assets/scripts/delivery.js">
+</script>
+
+<script type="module">
+import footer from "/components/footer.js"
+document.getElementById("footerM").innerHTML= footer()
+
+
+// function gotoPayment(){
+//         // var lowerDiv = document.getElementById("lower");
+//         // lowerDiv.style.display="none";
+//         // var toDown =document.getElementById("down-div")
+//         // toDown.style.display="block";
+
+//         console.log("clicking")
+//     }
+
+</script>
+
+<!-- <script src="napkinsData (1).js"></script> -->
+
+<script>
+    let zarahome = document.getElementById("logo")
+    zarahome.addEventListener("click", function(){
+        window.location.href = "/assets/pages/zarahome.html"
+    })
+</script>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
+    <link rel="icon" href="/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="/assets/styles/footer.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.0.0/css/all.css"/>
+    <link rel="stylesheet" href="/assets/styles/preloader.css">
+    <link rel="stylesheet" href="/assets/styles/categorysidebar.css">
+    <link rel="stylesheet" href="/assets/styles/navbar2.css">
+    <link rel="stylesheet" href="/assets/styles/preloader.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.0.0/css/all.css"/>
+    <link rel="stylesheet" href="/assets/styles/cart.css">
+    <title>Cart Page | Zara Home</title>
+  </head>
+  <body>
+
+   <!-- Preloader Div -->
+
+   <div id="preloader"></div>
+
+   <!-- Preloader Div -->
+
+   <div id="navbar"></div>
+
+    <div id="baasket">
+        <div id="shopping" class="common-basket " >
+
+            <span id="shopBasket" >SHOPPING BASKET (0)</span>
+
+        </div>
+        <div id="buylater" class="common-basket" >
+
+            <span>BUY LATER (0)</span>
+
+        </div>
+    </div>
+
+    
+   
+   
+   <div id="container">
+
+        <!-- <div id="bag">
+
+            <span> <i class="fa-thin fa-bag-shopping " id="shoppingBagIcon" ></i> </span>
+            <p>Your shopping basket is empty</p>
+        </div> -->
+    
+        <div id="left-cont"></div>
+
+
+        <div id="right-cont">
+
+          <div id="pay">
+            <div id="Item"><h3 id="itemsText">0 &nbsp;ITEMS<h3/></div>
+            <div id="total-including-tax">
+                <p> Total items: including tax</p>
+                <p id="total-one" class="total-with-tax"> ₹ 1234</p>
+            </div>
+            <div id="grand-total">
+              <h4>TOTAL:</h4>
+              <p  id="total-twice" class="total-with-tax totaltwice">₹ 1234</p>
+
+            </div>
+            <div id="promotionText">
+              <span> DO YOU HAVE A PROMOTIONAL CODE? Enter it when you reach the payment
+              page
+            </span>
+            </div>
+            <button id="processbtn">PROCESS ORDER</button>
+          </div>
+        </div>
+
+
+        </div>
+      </div>
+
+
+       <!-- !Side Bar filter start here -->
+    <div id="foot"></div>
+
+    <div id="sidebarDiv"></div>
+    <!-- !Side bar filter end here -->
+
+    
+
+  </body>
+  <script src="/assets/scripts/cart.js" type="module" ></script>
+  </html>
+
+
+  <script type="module" >
+
+// let basket = document.getElementById("shopBasket")
+//     let countItem = JSON.parse(localStorage.getItem("cart")).length
+//         basket.innerHTML = `SHOPPING BASKET (${countItem})`
+
+  </script>
+
+
+
+
+
+
+
+
+
+<!-- preloader script -->
+<script>
+  var loader = document.getElementById("preloader")
+  window.addEventListener("load", function(){
+      loader.style.display = "none"
+  })
+
+  
+</script>
+<!-- preloader script -->
+
+<!-- ! Header & Footer Stuff -->
+<script type="module" >
+
+  import navbar2 from "/components/header2.js"
+  import sidebar2 from "/components/catsidebar2.js"
+  import footer from "/components/footer.js"
+
+  document.querySelector("#navbar").innerHTML = navbar2()
+  document.querySelector("#sidebarDiv").innerHTML = sidebar2()
+  document.querySelector("#foot").innerHTML = footer()
+  
+  // ! search functionality
+  let searchclick = document.getElementById("searchBox");
+  searchclick.addEventListener("click", searchClick)
+  function searchClick (){
+      window.location.href = "/assets/pages/search.html"
+  }
+      // search functionality
+
+
+  let addtocart = document.getElementById("addtocart")
+  addtocart.addEventListener("click", cart)
+  function cart(){
+      window.location.href="/assets/pages/cart.html"
+  }
+
+  let basket = document.getElementById("basketCount")
+    let count = JSON.parse(localStorage.getItem("cart")).length
+        basket.innerHTML = `(${count})`
+
+</script>
+
+<!-- ! Sidebar Function script -->
+
+<script src="/assets/scripts/catsidebar2.js" type="module"></script>
+
+<!-- ! Sidebar Function script -->
+
+<!-- Header & Footer Stuff -->
+<script type="module">
+  let mLogin = document.getElementById("modallogin");
+  mLogin.addEventListener("click", modalL)
+  function modalL(){
+      window.location.href = "/assets/pages/signup.html"
+  }
+  
+  let user = JSON.parse(localStorage.getItem("loggedUsername"))||"LOG IN"
+  document.getElementById("modallogin").innerHTML = user;
+  
+  document.getElementById("modallgOut").addEventListener("click", function(){
+      localStorage.removeItem("loggedUsername")
+      window.location.reload();
+  })
+  </script>

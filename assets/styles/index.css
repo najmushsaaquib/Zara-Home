@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(https://static.zarahome.net/8/static4/itxwebstandard/dto_imagen/worldwide/index.jpg?20220402020507);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 25px;
+}
+
+
+::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #111;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #474747;
+    border-radius: 10px;
+  }
+
+/* ! ----------Zara Image Logo Style Stars Here ----------*/
+
+#logo {
+  position: relative;
+  top: 55px;
+  left: 60px;
+}
+
+#logo img {
+  height: 20px;
+  width: 300px;
+}
+/* ! ----------Zara Image Logo Style Ends Here---------- */
+
+
+
+
+/* ----------Input Container Style Starts here ----------*/
+#input-container {
+  display: flex;
+  height: 60px;
+  width: 100%;
+  /* background-color: tomato; */
+  padding: 12px;
+  gap: 20px;
+  position: relative;
+  top: 360px;
+  left: 60px;
+}
+
+.go-btn {
+  width: 40px;
+  height: 39.35px;
+  border-radius: 0;
+}
+
+.go-btn:hover {
+  background-color: black;
+  color: white;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+input, select {
+  height: 39.35px;
+  width: 234px;
+  padding: 5px 10px;
+  border: 1px solid black;
+  background-color: white;
+  cursor: pointer;
+}
+
+
+
+
+/* ! ----------Input Container Style Ends here ----------*/
+

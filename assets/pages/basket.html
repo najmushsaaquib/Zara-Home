@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/../favicon.png" type="image/x-icon" />
+    <link rel="icon" href="/../favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../styles/basket.css">
+    <link rel="stylesheet" href="/assets/styles/categorysidebar.css">
+    <link rel="stylesheet" href="/assets/styles/navbar2.css">
+    <link rel="stylesheet" href="/assets/styles/footer.css">
+    <link rel="stylesheet" href="/assets/styles/preloader.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.0.0/css/all.css"/>
+    <title>Product Detail</title>
+    
+</head>
+<body>
+    
+    <!-- Preloader Div -->
+
+    <div id="preloader"></div>
+
+    <!-- Preloader Div -->
+
+    <!-- navbar goes here -->
+    
+    <!-- navbar goes here -->
+
+
+    <div id="containerBasket">
+    <div id="navbar"></div>
+
+    <div id="basketImages"></div>
+
+
+
+    <div id="information">
+     <div id="info"></div>
+    <div id="size">
+        <div id="SizeOption">MEASUREMENTS</div>
+        <div id="differentSize">
+        <hr>
+        <div id="basketPrice"><span class="lt">SMALL</span><span id="price1" ></span></div>
+        <div id="basketPrice2"><span class="lt">MEDIUM</span><span id="price2" ></span></div>
+        <div id="basketPrice3"><span class="lt">LARGE</span><span id="price3" ></span></div>
+        
+    </div>
+    </div>
+    <button id="addToBasket">ADD TO BASKET<span id="prc"></span></button>
+
+      <div id="links">
+
+          
+          <a href="">Product Details</a>
+        </br>
+        <a href="">Shipping and Returns</a>
+    </br>
+    <a href="">In-store Availability</a>
+</br>
+</div>  
+
+    <div id="sidebarDiv"></div>
+
+</body>
+
+
+
+
+<!-- preloader script -->
+<script>
+    var loader = document.getElementById("preloader")
+    window.addEventListener("load", function(){
+        loader.style.display = "none"
+    })
+
+    
+</script>
+<!-- preloader script -->
+
+<script src="../scripts/basket.js">
+</script>
+
+<script type="module" >
+
+    import navbar2 from "/components/header2.js"
+    import sidebar2 from "/components/catsidebar2.js"
+
+    document.querySelector("#navbar").innerHTML = navbar2()
+    document.querySelector("#sidebarDiv").innerHTML = sidebar2()
+    
+    // ! search functionality
+    let searchclick = document.getElementById("searchBox");
+    searchclick.addEventListener("click", searchClick)
+    function searchClick (){
+        window.location.href = "/assets/pages/search.html"
+    }
+        // search functionality
+   
+
+    let addtocart = document.getElementById("addtocart")
+    addtocart.addEventListener("click", cart)
+    function cart(){
+        window.location.href="/assets/pages/cart.html"
+    }
+
+    let basket = document.getElementById("basketCount")
+    let count = JSON.parse(localStorage.getItem("cart")).length
+        basket.innerHTML = `(${count})`
+
+</script>
+
+
+<!-- ! Sidebar Function script -->
+
+<script src="/assets/scripts/catsidebar2.js" type="module"></script>
+
+<!-- ! Sidebar Function script -->
+
+</html>
+
+<script type="module">
+    let mLogin = document.getElementById("modallogin");
+    mLogin.addEventListener("click", modalL)
+    function modalL(){
+        window.location.href = "/assets/pages/signup.html"
+    }
+    
+    let user = JSON.parse(localStorage.getItem("loggedUsername"))||"LOG IN"
+    document.getElementById("modallogin").innerHTML = user;
+    
+    document.getElementById("modallgOut").addEventListener("click", function(){
+        localStorage.removeItem("loggedUsername")
+        window.location.reload();
+    })
+    </script>
+
+

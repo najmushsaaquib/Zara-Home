@@ -1,0 +1,297 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+/* ! scroolbar style */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #111;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #474747;
+  border-radius: 10px;
+}
+
+/* ! scroolbar style */
+
+#productContainer {
+  display: grid;
+  /* grid-template-columns: auto auto; */
+  gap: 15px;
+  width: 95%;
+  margin: auto;
+  /* height:fit-content; */
+  margin-top: 150px;
+  margin-bottom: 60px;
+}
+
+#oneDiv {
+  /* display: flex; */
+  height: 970px;
+  width: 95%;
+  /* justify-content: center; */
+  text-align: center;
+  margin: auto;
+  cursor: pointer;
+}
+
+#oneDiv p {
+  font-size: 16px;
+  line-height: 55px;
+}
+
+#oneDiv img {
+  width: 100%;
+  height: 820px;
+}
+
+#oneMainDiv {
+  height: 490px;
+  margin-bottom: 40px;
+  cursor: pointer;
+}
+
+#oneMainDiv p {
+  line-height: 50px;
+}
+
+#imgDiv {
+  width: 100%;
+  height: 90%;
+  /* border: 2px solid tomato; */
+}
+
+#imgDiv img {
+  width: 100%;
+  height: 100%;
+}
+
+#productName {
+  font-size: 18px;
+  text-align: center;
+  margin-top: 0px;
+  color: #1e1e1e;
+  line-height: 20px;
+  font-style: normal;
+  font-weight: 500;
+}
+#price {
+  text-align: center;
+  margin-top: -30px;
+  color: #1e1e1e;
+  line-height: 20px;
+  font-style: normal;
+  font-weight: 400;
+}
+#filter {
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin-right: 8px;
+  margin-top: 98px;
+  display: grid;
+  width: 300px;
+  height: 30px;
+  /* border: 1px solid black; */
+  grid-template-columns: repeat(3, 29%);
+  gap: 5px;
+  text-align: center;
+  align-items: center;
+  font-size: 11px;
+}
+
+#one,
+#two {
+  cursor: pointer;
+}
+
+#filter div:not(:last-child) {
+  border-right: 1px solid black;
+}
+
+#items {
+}
+
+#view span:not(:first-child) {
+  letter-spacing: 3px;
+}
+#filterText {
+  cursor: pointer;
+}
+
+/* #filterMe {
+  background-color: transparent;
+  height: 30px;
+  outline: none;
+  border: none;
+  color: #1e1e1e;
+  line-height: 20px;
+  font-size: 12px;
+  margin-left: -20px;
+  padding-bottom: 10px;
+  text-align: left;
+  padding-top: 5px;
+  font-weight:100px;
+} */
+
+.small-font {
+  font-size: 12px;
+}
+
+#viewDiv {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  font-size: 12px;
+  padding-top: 6px;
+  padding-right: 8px;
+}
+
+.numGrid:active {
+  text-decoration: underline;
+}
+
+/* ! this is side filter style start point */
+
+#loginside {
+  background-color: white;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  /* right: 0;   */
+  width: 320px;
+  height: 100vh;
+  z-index: 2000;
+  transition: 0.5s ease;
+  box-shadow: rgb(0, 0, 0) 0px 30px 90px;
+}
+
+.loginactive {
+  right: 0 !important;
+}
+#logouttext {
+  font-size: 13px;
+  font-weight: bolder;
+  margin-left: 5px;
+  color: black;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+  display: none;
+  margin-top: 28px;
+}
+#fil {
+  height: 50px;
+  width: 100%;
+  border: 1px solid black;
+  font-size: 34px;
+  color: #1e1e1e;
+  font-size: 34px;
+  margin-top: 2px;
+  padding-left: 20px;
+  font-weight: bolder;
+  border-left: none;
+  border-top: none;
+  border-right: none;
+}
+
+#FilterPrice {
+  height: 55px;
+  width: 100%;
+  border: 1px solid rgb(150, 150, 150);
+  padding: 20px;
+  border-left: none;
+  border-top: none;
+  border-right: none;
+  justify-content: center;
+}
+.sidePrice {
+  color: #5c5c5c;
+  font-size: 18px;
+  font-weight: 600;
+}
+#h2l {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+  height: 60px;
+  border: 1px solid rgb(150, 150, 150);
+  justify-content: space-between;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+.lable-css {
+  font-size: 18px;
+  margin: 8px;
+}
+
+.lableDiv {
+  display: flex;
+  align-items: center;
+}
+.lableDiv:first-child {
+  padding-left: 20px;
+}
+#h2l > div > input {
+  background-color: black;
+  color: #1e1e1e;
+  border-left: none;
+}
+#h2l > div > label {
+  font-size: 18px;
+}
+input[type="radio"] {
+  width: 1.5em;
+  height: 2em;
+  accent-color: black;
+}
+#lowerDiv {
+  position: absolute;
+  bottom: 0;
+  height: 80px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+}
+#lowerDiv > div > button {
+  width: 90%;
+  height: 35px;
+  font-size: 15px;
+  background-color: white;
+  border-radius: 0;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+#box{
+  width: 95%;
+  border-bottom: 0.3px dashed rgb(177, 177, 177);
+  margin: 0 auto;
+}
+
+#close :hover {
+  background-color: #1e1e1e;
+  transition: 0.7s;
+  color: white;
+}
+#clear :hover {
+  background-color: #1e1e1e;
+  transition: 0.7s;
+  color: white;
+}
+
+/* /this is side filter style end point  */

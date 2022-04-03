@@ -1,0 +1,42 @@
+
+#payment-card{
+    /* background-color: black; */
+    border: 1px solid transparent;
+    /* opacity: 0.3; */
+    /* backface-visibility: hidden;
+    z-index: 1; */
+    background-image: linear-gradient(45deg, #0045c7, #ff2c7d);
+  border-radius: 8px;
+  backface-visibility: hidden;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+
+#card_number{
+    /* border: 1px solid white; */
+    border: none;
+    border-bottom: 0.5px solid white;
+}
+#card_name{
+    /* border: 1px solid white; */
+    height: auto;
+    border: none;
+    border-bottom: 0.5px solid white;
+}
+
+
+
+#chip{
+    /* border: 1px solid black; */
+    width: 70px;
+    height: 50px;
+    border-radius: 10px;
+    position: absolute;
+    margin-left: 5px;
+    margin-top: 5px;
+
+}
+#chip>img{
+    width: 70px;
+    height: 50px;
+}

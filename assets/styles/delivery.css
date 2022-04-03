@@ -1,0 +1,229 @@
+
+*{
+   font-family: Roboto,Helvetica Neue,sans-serif;
+}
+#full{
+   height: 900px;
+   width: 100%;
+   /* border: 1px solid teal; */
+   margin: auto;
+   display: grid;
+}
+#header_div{
+   height: 30px;
+   width: 100%;
+   /* border: 1px solid teal; */
+   margin-top: 10px;
+   display: flex; 
+}
+#logo{
+   height: 23px;
+   width: 18%;
+   /* border:1px solid red; */
+   margin-right: 72%;
+   cursor: pointer;
+   
+}
+#header_div>p{
+   /* border: 1px solid red; */
+   margin-top: 15px;
+   font-size: 17px;
+   font-family: ZH-Sans, Arial, "Lucida Sans Unicode", sans-serif;
+}
+#h3_div{
+   display: flex;
+   justify-content:space-around;
+   margin-top:25px;
+   border: none;
+   /* border-bottom: 1px solid ; */
+}
+#upper{
+   height: 120px;
+   width: 94%;
+   border: none;
+   justify-content:space-evenly;
+   position: fixed;
+   top: 0;
+   background-color: white;
+   margin: auto;
+   margin-left: 25px;
+   /* margin-top: 80px; */
+   z-index: 1000;
+}
+#upper>h3{
+   cursor: pointer;
+}
+#lower{
+   height: 680px;
+   width: 95%;
+   margin: auto;
+   /* border: 1px solid black;  */
+   display: flex;
+   margin-left:1px;
+   margin-top:8%
+}
+#payment{
+   height: 670px;
+   width: 73%;
+   /* border: 1px solid blue; */
+   margin: auto;
+   /* display: grid; */
+   gap: 10px;
+}
+#cart-div{
+   height: 300px;
+   width: 23%;
+   /* border: 1px solid gray; */
+   margin-top: 10px;
+   position: sticky;
+   top: 5rem;
+   right: 2rem;
+}
+#standard{
+   height: 100px;
+   width: 95%;
+   /* border: 1px solid; */
+   /* margin: auto; */
+   margin-top: 23px;
+   /* margin-left: 0px; */
+}
+#delivery{
+   height: 130px;
+   width: 95%;
+   /* border: 1px solid green; */
+   /* margin: auto; */
+}
+#input-tags{
+   height: 400px;
+   width: 95%;
+   /* margin: auto; */
+   /* border: 1px solid teal;   */
+   display: flex;    
+}
+#price{
+   height: 35px;
+   width: 100%;
+   display: flex;
+   border: none;
+   border-top: 1px solid;
+   justify-content: space-between;
+}
+#checkbox{
+   height: 18px ;
+   width: 15px;
+   margin-bottom: 25px;
+}
+#left{
+   height: 390px;
+   width: 48%; 
+   /* border: 1px solid; */
+}
+#left>input{
+   border: none;
+   border-bottom: 1px solid;
+   outline: none;
+   height: 20px;
+   width: 92%;
+}
+#right{
+   height: 390px;
+   width: 48%;
+
+}
+#right>input{
+   border: none;
+   border-bottom: 1px solid;
+   outline: none;
+   height: 20px;
+   width: 92%;
+}
+#label{
+   display: flex;
+}
+/* here is the styling of cart items */
+#cart-div{
+   height: 300px;
+   width: 23%;
+   /* border: 1px solid gray; */
+   margin-top: 10px;
+   position: sticky;
+   display: grid;
+   top: 5rem;
+   right: 2rem;
+}
+#cart_count{
+   height: 50px;
+   width: 100%;
+   border: none;
+   border-bottom: 1px solid; 
+   display: flex;
+}
+#total_items{
+   height: 40px;
+   width: 98%;
+   display: flex;
+   justify-content: space-between;
+   margin-top: 10px;
+   /* border: 1px solid; */
+}
+#item_delivery{
+  height: 30px;
+  width: 98%;
+  display: flex;
+  justify-content: space-between;
+  /* border: 1px solid; */
+}
+#cart_total{
+   height: 40px;
+   width: 98%;
+   display: flex;
+   justify-content: space-between;
+   /* margin-top: auto; */
+  /* border: 1px solid; */
+    
+}
+#para{
+   height: 20px;
+   width: 99%;
+   margin-bottom: 20px;
+   /* border: 1px solid ; */
+}
+
+button{
+   background-color: black;
+   color: white;
+   padding: 5px 140px;
+   border: 1px solid;
+   cursor:pointer;
+   margin: auto;
+}
+
+
+/* delivery details styling */
+
+/* #delivery_details{
+   height: 150px;
+   width: 90%;
+   border: 0.2px solid ;
+   margin-top: 10px;
+   line-height: 10px;
+}
+#billingData{
+    height: 250px;
+    width: 25%;
+    border: 1px solid red;
+    margin-left: 75px;
+} */
+
+::-webkit-scrollbar {
+   width: 8px;
+ }
+ 
+ ::-webkit-scrollbar-track {
+   background: white;
+ }
+ 
+ ::-webkit-scrollbar-thumb {
+   background: white;
+   border-radius: 10px;
+ }
